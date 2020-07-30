@@ -12,15 +12,18 @@ public class Utilities : MonoBehaviour
 
         textObject.text = "";
 
-        for (int i = 0; i < interiorText.Length; i++)
-        {
-            interiorText += interiorText[i];
-            //waitSeconds(1);
-        }
+        //StartCoroutine(writeWait(interiorText));
     }
 
-    public static IEnumerator waitSeconds(int seconds)
+    IEnumerator writeWait(string givenText)
     {
-        yield return new WaitForSeconds(seconds);
+        Debug.Log("test");
+
+        for (int i = 0; i < givenText.Length; i++)
+        {
+            Debug.Log(i);
+            yield return new WaitForSeconds(1);
+            //interiorText += interiorText[i];
+        }
     }
 }
