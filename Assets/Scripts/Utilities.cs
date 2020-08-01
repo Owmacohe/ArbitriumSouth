@@ -5,6 +5,7 @@ using TMPro;
 
 public class Utilities : MonoBehaviour
 {
+    /*
     public static void typeText(string givenTag)
     {
         var textObject = GameObject.FindWithTag(givenTag).GetComponent<TextMeshProUGUI>();
@@ -26,7 +27,9 @@ public class Utilities : MonoBehaviour
             //interiorText += interiorText[i];
         }
     }
+    */
 
+    /*
     public static bool doesContain(int givenInt, ArrayList givenArray)
     {
         var checker = false;
@@ -46,4 +49,5 @@ public class Utilities : MonoBehaviour
 
         return checker;
     }
+    */
 }
