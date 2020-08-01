@@ -725,9 +725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd86647787f44045bdb7e2e5d5b3366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeSpeed: 0
   charLength: 455
   fillPrefab: {fileID: 1810317406481967430, guid: 2ac17e3f33a5344fe9af4f01ff70780b, type: 3}
+  titleFont: {fileID: 11400000, guid: 2ea0b45b8773647e09e7f5d3a2b8ebfd, type: 2}
 --- !u!1 &1584064217
 GameObject:
   m_ObjectHideFlags: 0

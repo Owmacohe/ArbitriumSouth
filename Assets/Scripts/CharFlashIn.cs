@@ -9,6 +9,7 @@ public class CharFlashIn : MonoBehaviour
     private TextMeshProUGUI textObject;
 
     public int charSpeed;
+    public TMP_FontAsset titleFont;
 
     void Start()
     {
@@ -19,24 +20,29 @@ public class CharFlashIn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BackFill.fillsAdded == true)
+        if (textObject.text == "")
         {
-            if (distance >= 8 && Random.Range(0, 1000) == 0 && textObject.text == "")
+            if (distance >= 8 && Random.Range(0, 5 * charSpeed) == 0)
             {
-                textObject.text = getRandomCharacter("alphaNum").ToString();
+                textObject.text = getRandomCharacter("all").ToString();
             }
-            else if (distance > 6 && distance < 8 && Random.Range(0, 3000) == 0 && textObject.text == "")
+            else if (distance >= 6 && distance < 8 && Random.Range(0, 10 * charSpeed) == 0)
             {
-                textObject.text = getRandomCharacter("alphaNum").ToString();
+                textObject.text = getRandomCharacter("all").ToString();
             }
-            else if (distance > 4 && distance < 6 && Random.Range(0, 10000) == 0 && textObject.text == "")
+            else if (distance >= 4 && distance < 6 && Random.Range(0, 12 * charSpeed) == 0)
             {
-                textObject.text = getRandomCharacter("alphaNum").ToString();
+                textObject.text = getRandomCharacter("all").ToString();
             }
-            else if (distance > 2 && distance < 4 && Random.Range(0, 17000) == 0 && textObject.text == "")
+            else if (distance < 4 && Random.Range(0, 15 * charSpeed) == 0)
             {
-                textObject.text = getRandomCharacter("alphaNum").ToString();
+                textObject.text = getRandomCharacter("all").ToString();
             }
+        }
+
+        if (Random.Range(0, 30000) == 0 && textObject.font != titleFont)
+        {
+            textObject.text = getRandomCharacter("all").ToString();
         }
     }
 
@@ -54,6 +60,9 @@ public class CharFlashIn : MonoBehaviour
                 break;
             case "alphaNum":
                 characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                break;
+            case "all":
+                characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=_+`~[]{}:;,.?/|";
                 break;
         }
 

@@ -1,24 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BackFill : MonoBehaviour
 {
-    public float typeSpeed;
     public int charLength;
     public GameObject fillPrefab;
-
-    public static bool fillsAdded = false;
+    public TMP_FontAsset titleFont;
 
     void Start()
     {
         //Utilities.typeText("backfill");
 
-        StartCoroutine(writeWait(typeSpeed));
-    }
-
-    IEnumerator writeWait(float speed)
-    {
         float xPlacement = -8.5f;
         float yPlacement = 4.5f;
 
@@ -36,12 +30,29 @@ public class BackFill : MonoBehaviour
                 yPlacement -= 0.75f;
             }
 
-            if (i >= charLength - 1)
+            if (i.Equals(75) || i.Equals(76) || i.Equals(77) || i.Equals(78) || i.Equals(79))
             {
-                fillsAdded = true;
+                newFill.GetComponent<TextMeshProUGUI>().font = titleFont;
             }
 
-            yield return new WaitForSeconds(speed);
+            switch (i)
+            {
+                case 75:
+                    newFill.GetComponent<TextMeshProUGUI>().text = "S";
+                    break;
+                case 76:
+                    newFill.GetComponent<TextMeshProUGUI>().text = "T";
+                    break;
+                case 77:
+                    newFill.GetComponent<TextMeshProUGUI>().text = "A";
+                    break;
+                case 78:
+                    newFill.GetComponent<TextMeshProUGUI>().text = "R";
+                    break;
+                case 79:
+                    newFill.GetComponent<TextMeshProUGUI>().text = "T";
+                    break;
+            }
         }
     }
 }
