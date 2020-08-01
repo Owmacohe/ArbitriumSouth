@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -469,14 +469,13 @@ GameObject:
   - component: {fileID: 797613496}
   - component: {fileID: 797613498}
   - component: {fileID: 797613497}
-  - component: {fileID: 797613499}
   m_Layer: 5
-  m_Name: Backfill
-  m_TagString: backfill
+  m_Name: Fill_Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &797613496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -493,8 +492,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.1}
-  m_SizeDelta: {x: 17.5, y: 10}
+  m_AnchoredPosition: {x: -8.5, y: 4.5}
+  m_SizeDelta: {x: 0.7, y: 0.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797613497
 MonoBehaviour:
@@ -516,7 +515,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Q
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d112e49d6af62421ebf69ca043f1a497, type: 2}
   m_sharedMaterial: {fileID: -2822780602533373040, guid: d112e49d6af62421ebf69ca043f1a497, type: 2}
@@ -553,8 +554,8 @@ MonoBehaviour:
   m_fontSizeMin: 1
   m_fontSizeMax: 1
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
@@ -566,7 +567,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 459
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_isTextTruncated: 0
@@ -590,13 +591,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 797613497}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -612,20 +613,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797613495}
   m_CullTransparentMesh: 0
---- !u!114 &797613499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797613495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd86647787f44045bdb7e2e5d5b3366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeSpeed: 0.03
-  charLength: 520
 --- !u!1 &929974698
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +625,7 @@ GameObject:
   - component: {fileID: 929974701}
   - component: {fileID: 929974700}
   - component: {fileID: 929974699}
+  - component: {fileID: 929974703}
   m_Layer: 5
   m_Name: FillCanvas
   m_TagString: Untagged
@@ -725,6 +713,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 16, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &929974703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929974698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd86647787f44045bdb7e2e5d5b3366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeSpeed: 0
+  charLength: 455
+  fillPrefab: {fileID: 1810317406481967430, guid: 2ac17e3f33a5344fe9af4f01ff70780b, type: 3}
 --- !u!1 &1584064217
 GameObject:
   m_ObjectHideFlags: 0
