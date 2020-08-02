@@ -96,8 +96,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.8
-  m_fontSizeBase: 0.8
+  m_fontSize: 0.85
+  m_fontSizeBase: 0.85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 1
@@ -166,5 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c59ff44f5cf6742844eeb59f53d1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charSpeed: 100
+  charSpeed: 5
   titleFont: {fileID: 11400000, guid: 2ea0b45b8773647e09e7f5d3a2b8ebfd, type: 2}
+  baseColor: {r: 0.039215688, g: 1, b: 0.039215688, a: 1}
+  glowColor: {r: 0.801, g: 1, b: 0.801, a: 1}
+  glitchColor: {r: 1, g: 0.039215688, b: 1, a: 1}

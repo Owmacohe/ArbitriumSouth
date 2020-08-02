@@ -5,6 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Title
+  - tTag
+  - aTag
+  - rTag
+  - xTag
+  - iTag
+  - eTag
+  - nTag
+  - gTag
+  - sTag
+  - STag
+  - ETag
+  - _Tag
+  - MenuParent
   layers:
   - Default
   - TransparentFX

@@ -7,10 +7,12 @@ public class BackFill : MonoBehaviour
 {
     public int charLength;
     public GameObject fillPrefab;
-    public TMP_FontAsset titleFont;
+    public SpriteRenderer fadeSprite;
 
     void Start()
     {
+        StartCoroutine(waitFade());
+
         //Utilities.typeText("backfill");
 
         float xPlacement = -8.5f;
@@ -19,6 +21,7 @@ public class BackFill : MonoBehaviour
         for (int i = 0; i < charLength; i++)
         {
             var newFill = Instantiate(fillPrefab);
+            var textObject = newFill.GetComponent<TextMeshProUGUI>();
             newFill.transform.SetParent(gameObject.transform);
 
             newFill.transform.position = new Vector2(xPlacement, yPlacement);
@@ -30,29 +33,80 @@ public class BackFill : MonoBehaviour
                 yPlacement -= 0.75f;
             }
 
-            if (i.Equals(75) || i.Equals(76) || i.Equals(77) || i.Equals(78) || i.Equals(79))
-            {
-                newFill.GetComponent<TextMeshProUGUI>().font = titleFont;
-            }
-
             switch (i)
             {
+                case 72:
+                    newFill.tag = "STag";
+                    break;
+                case 73:
+                    newFill.tag = "tTag";
+                    break;
+                case 74:
+                    newFill.tag = "aTag";
+                    break;
                 case 75:
-                    newFill.GetComponent<TextMeshProUGUI>().text = "S";
+                    newFill.tag = "rTag";
                     break;
                 case 76:
-                    newFill.GetComponent<TextMeshProUGUI>().text = "T";
+                    newFill.tag = "tTag";
                     break;
                 case 77:
-                    newFill.GetComponent<TextMeshProUGUI>().text = "A";
+                    newFill.tag = "_Tag";
                     break;
-                case 78:
-                    newFill.GetComponent<TextMeshProUGUI>().text = "R";
+                case 98:
+                    newFill.tag = "ETag";
                     break;
-                case 79:
-                    newFill.GetComponent<TextMeshProUGUI>().text = "T";
+                case 99:
+                    newFill.tag = "xTag";
+                    break;
+                case 100:
+                    newFill.tag = "iTag";
+                    break;
+                case 101:
+                    newFill.tag = "tTag";
+                    break;
+                case 102:
+                    newFill.tag = "_Tag";
+                    break;
+                case 398:
+                    newFill.tag = "STag";
+                    break;
+                case 399:
+                    newFill.tag = "eTag";
+                    break;
+                case 400:
+                    newFill.tag = "tTag";
+                    break;
+                case 401:
+                    newFill.tag = "tTag";
+                    break;
+                case 402:
+                    newFill.tag = "iTag";
+                    break;
+                case 403:
+                    newFill.tag = "nTag";
+                    break;
+                case 404:
+                    newFill.tag = "gTag";
+                    break;
+                case 405:
+                    newFill.tag = "sTag";
+                    break;
+                case 406:
+                    newFill.tag = "_Tag";
                     break;
             }
+        }
+    }
+
+    IEnumerator waitFade()
+    {
+        yield return new WaitForSeconds(6);
+
+        for (float i = 0; i < 1.1f; i += 0.1f)
+        {
+            fadeSprite.color = new Color(1, 1, 1, i);
+            yield return new WaitForSeconds(0.075f);
         }
     }
 }
