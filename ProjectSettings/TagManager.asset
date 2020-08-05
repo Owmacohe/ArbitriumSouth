@@ -18,6 +18,9 @@ TagManager:
   - ETag
   - _Tag
   - MenuParent
+  - Start
+  - Exit
+  - Settings
   layers:
   - Default
   - TransparentFX
