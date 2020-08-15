@@ -13,8 +13,6 @@ public class BackFill : MonoBehaviour
     {
         StartCoroutine(waitFade());
 
-        //Utilities.typeText("backfill");
-
         float xPlacement = -8.5f;
         float yPlacement = 4.5f;
 

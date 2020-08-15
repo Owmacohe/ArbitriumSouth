@@ -5,7 +5,7 @@ using TMPro;
 
 public class CharFlashIn : MonoBehaviour
 {
-    private float distance;
+    //private float distance;
     private TextMeshProUGUI textObject;
 
     public int charSpeed;
@@ -16,7 +16,7 @@ public class CharFlashIn : MonoBehaviour
 
     void Start()
     {
-        distance = Vector2.Distance(gameObject.transform.position, GameObject.FindGameObjectWithTag("Title").transform.position);
+        //distance = Vector2.Distance(gameObject.transform.position, GameObject.FindGameObjectWithTag("Title").transform.position);
         textObject = GetComponent<TextMeshProUGUI>();
     }
 
