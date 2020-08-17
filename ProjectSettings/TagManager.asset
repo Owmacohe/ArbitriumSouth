@@ -21,7 +21,7 @@ TagManager:
   - Start
   - Exit
   - Settings
-  - Middle
+  - Box
   layers:
   - Default
   - TransparentFX

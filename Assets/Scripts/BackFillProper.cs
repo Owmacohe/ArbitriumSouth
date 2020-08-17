@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//59 by 25
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -7,6 +9,7 @@ public class BackFillProper : MonoBehaviour
 {
     public float charNum;
     public GameObject fillPrefab;
+    public float brightness;
 
     void Start() {
         float xPlacement = -8.7f;
@@ -16,8 +19,8 @@ public class BackFillProper : MonoBehaviour
         {
             var newFill = Instantiate(fillPrefab);
             newFill.transform.SetParent(gameObject.transform);
-            newFill.GetComponent<TextMeshProUGUI>().text = getRandomCharacter("all");
             newFill.GetComponent<TextMeshProUGUI>().fontSize = (0.5f * charNum);
+            newFill.GetComponent<TextMeshProUGUI>().text = getRandomCharacter("all");
 
             newFill.transform.position = new Vector2(xPlacement, yPlacement);
             xPlacement += (0.3f * charNum);
@@ -28,9 +31,9 @@ public class BackFillProper : MonoBehaviour
                 yPlacement -= (0.4f * charNum);
             }
 
-            float distance = Vector2.Distance(newFill.transform.position, GameObject.FindGameObjectWithTag("Middle").transform.position);
-            byte alpha = (byte)(distance * 25);
-            Debug.Log(alpha);
+            byte alpha = (byte)((brightness * 100000) * (1 / CalculateDistance(newFill.transform)));
+            //Debug.Log(alpha);
+
             newFill.GetComponent<TextMeshProUGUI>().color = new Color32(10, 255, 10, alpha);
         }
     }
@@ -51,11 +54,24 @@ public class BackFillProper : MonoBehaviour
                 characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
                 break;
             case "all":
-                characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=_+`''~[]{}:;,.?/|";
+                characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%^&*()-=_+`''~[]{}:;,.?/|";
                 break;
         }
 
         var randomNum = Random.Range(0, characters.Length - 1);
         return characters[randomNum].ToString();
+    }
+
+    float CalculateDistance(Transform thisPosition)
+    {
+        GameObject[] boxes = GameObject.FindGameObjectsWithTag("Box");
+        float boxDistance = 0;
+
+        for (int i = 0; i < boxes.Length; i++)
+        {
+            boxDistance += Vector2.Distance(thisPosition.position, boxes[i].transform.position);
+        }
+
+        return Mathf.Pow(boxDistance, 2);
     }
 }
