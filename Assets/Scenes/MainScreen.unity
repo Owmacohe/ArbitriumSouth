@@ -1664,6 +1664,7 @@ GameObject:
   - component: {fileID: 2098658487}
   - component: {fileID: 2098658486}
   - component: {fileID: 2098658485}
+  - component: {fileID: 2098658484}
   m_Layer: 5
   m_Name: TextAreas
   m_TagString: Untagged
@@ -1671,6 +1672,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2098658484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098658483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba865202f489449d96392b506937063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: 163414ec63cfb48d3ab17e4deedce69b, type: 3}
 --- !u!114 &2098658485
 MonoBehaviour:
   m_ObjectHideFlags: 0

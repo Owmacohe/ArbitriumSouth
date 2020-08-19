@@ -1,16 +1,108 @@
 ﻿{
-    "0":  [
-        "DESCRIPTION",
-        "N",
-        "W",
-        "E",
-        "S"
-    ],
-    "1": [
-        "DESCRIPTION",
-        "N",
-        "W",
-        "E",
-        "S"
+    "gameScenes": [
+        {
+            "sceneNum": "0",
+            "description": "Musty elegance and fading moss lie about you. This world, while living, has long been deserted. Your skin can feel the small voles and other soft rodents churning the soil deep beneath your feet. Deer and sand-covered sprites parallel your march. The silence of this world waits, and forgets.",
+            "northValue": "Continue softy forward, weaving between husks of long-deserted arbor?",
+            "westValue": "Approach an ashen stag, and commune with this extension of her hand?",
+            "eastValue": "Reach for a strong and pallid branch, hoping to ascend to the canopy?",
+            "southValue": "Release your grip on this sunken world, for it has no true bearing to you?"
+        }, // 0
+        {
+            "sceneNum": "1",
+            "description": "Dry needles float down almost like snow from the verdant plumage high above. The trees lining your way sit nearly all abandoned. Their bark was long ago peeled away for the final departing ships, and with it went the forest. Old and hearty spirits linger here still though.",
+            "northValue": "Pursue silent passage further and deeper between these arboreal tombs?",
+            "westValue": "Spend a time in repose, and whisper with old voices long gritty and hoarse",
+            "eastValue": "Dig solemnly into the crumbling earth, and follow small keratinous bones?",
+            "southValue": "Breathe deep of the aged pine, and dissolve your meaning into the welcoming world?"
+        }, // 1
+        {
+            "sceneNum": "2",
+            "description": "Deep-seated sockets placed over its eyes conceal the beast's gaze. Antlers adorned with sun-bleached moss and a withered hide speak out toward you:<div class='speech'>Seek you to elevate us? I am old and putrid, and would make a fine pilgrim. Release me, please.</div>",
+            "northValue": "Turn aside and make your way to lighter pastures, where hushed voices cannot follow?",
+            "westValue": "Remind cold flesh of their multitudinous histories, and awaken its still bones?",
+            "eastValue": "Grasp deeply onto coarse cervine fur, and recourse within a mind long dead?",
+            "southValue": "Wail utter hopelessness into the particulate air, calling forth your own entropy?"
+        }, // 2
+        {
+            "sceneNum": "3",
+            "description": "Crumbling lichen and hanging branches encircle the great tree's trunk as you climb. Though once a bastion and scholar, only silent drums beat from its heart. Greater in elevation, it sways, and bright light cracks your veiled eyes. At its zenith, hesitation weighs down in all its enormities.",
+            "northValue": "Glide slowly down, and make for hollow sanctuary in a tree adjacent?",
+            "westValue": "Attrap dusty leaves in your palm, and partake of their faded colours?",
+            "eastValue": "Steel your scattered resolve, and burst into the bleached sunlight above?",
+            "southValue": "In anticipation of soft earth below, release, and seek vertiginous finality?"
+        }, // 3
+        {
+            "sceneNum": "1_1",
+            "description": "Day is nightfall, and winter manifests all zir colours. Plant life is sparse and cold, yet still particles float between all spaces. A soot hall, provenance of a destitute monarchy now lies grey and twined in the spire-like wood. Silence here is hard as granite, save for amphibious warnings.",
+            "northValue": "Follow blue and broken stairs down and wide to their wrought-rusty throne?",
+            "westValue": "Fix upon fast council, and break forth your judgment to broken earrings?",
+            "eastValue": "Break for the near catylistic stone displaying, in scripture, all names yet to be written?",
+            "southValue": "Allow sleep to come switfly now, for it is used to this place, and well-practiced here?"
+        }, // 1_1
+        {
+            "sceneNum": "1_2",
+            "description": "Hours, life-ages, and seconds pass. Great terrorsome poplar-spirits, once unspeakable lords unto this land, crawl slowly forth for languid communion:<div class='speech'>Would you drink us in battle? Drive our knowledge deep away into the 50th dead world? We think not.</div>",
+            "northValue": "Sit in repose for an eon longer, breathing knowingness in an unconscious state?",
+            "westValue": "Understand the futility of a word, and release their fluttered stalwart souls?",
+            "eastValue": "Let horror descend, and pass swiftly on in respect for days of old?",
+            "southValue": "Marvel and falter at terrible majesty, suffocated under the unyielding weight of time?"
+        }, // 1_2
+        {
+            "sceneNum": "1_3",
+            "description": "The chittering and burrowing of onyxian beetles heralds your descent. Skulls of birds, beasts, and those beings long forgotten rustle quietly.<div class='speech'>!!~~~ Welcome ~~~!!<br>Well-come, to you. Hello and goodbye.</div>Their voices simmer into silence.",
+            "northValue": "Passively and knowingly observe the destruction you have caused, and delve deeper?",
+            "westValue": "Pocket one tremmoring head-cask in a soft, pine laden pouch next to your heart?",
+            "eastValue": "Excavate the heterogeneous earth diagonally towards a rythmic and trembling drum?",
+            "southValue": "Rest your own bones soundlessly in black soil, and begin another meander more peacefully?"
+        }, // 1_3
+        {
+            "sceneNum": "2_1",
+            "description": "A bleached sun, peppered with rust and salt welcomes you into its still and dark sands. Horizons become temples, which in turn form the very fingertips of this world, far and distant. It is both twilight and early noon across these washing dunes, and the harvesters are fast at work scouring for seeds.",
+            "northValue": "Seek peace in the shade of great baobabs springing forth like footsteps?",
+            "westValue": "Breathe deep of the dry air, and allow your mycellum to seek purchase and find nourishment?",
+            "eastValue": "Take your first step on great glass stairs and walk upwards toward the sun?",
+            "southValue": "Carefully become that which the small workers seek, different to no other seed?"
+        }, // 2_1
+        {
+            "sceneNum": "2_2",
+            "description": "<div id='a'>Flesh and hair twine forth from within and behind the stag's crumbling bones, and lash themselves firmly in place. Gingerly and puppet-like, the monstrosity rips its hooves from their vine and earth clad resting places.</div><br><div class='flexrow'><div id='name'>Gnan Arcestul</div><div id='b'> will join your ascension.</div></div>",
+            "northValue": "Anchor your stream to it's own, and hurry swiftly eastward in search of understanding?",
+            "westValue": "Ask guidance of Arcestul, as the dry trees and facsimilic shrubbery twist direction in the mind?",
+            "eastValue": "Temper your heart in pallid steel, and confront <i>her</i> with this retribution?",
+            "southValue": "Having performed such an act of love, unnecessarily absolve your psyche of doubt?"
+        }, // 2_2
+        {
+            "sceneNum": "2_3",
+            "description": "Quarks becomes all so immediately clear, and the particles of composite matter are disolved. In a moment, solidity in the subatomic is rebooted as a Netflix special; here but stale. In the dusk summer comfort of this backlogged mind, weathered doors creak idly in their frames, as if thumbed by the wind.",
+            "northValue": "Try an opening of the hanging egress, hoping to catch a glimpse of the rising moon under the door?",
+            "westValue": "Spend no rush adding fire to the hearth, itself a long-ashen cemetary of logs?",
+            "eastValue": "Fumble for the latch of a cellar door on the ground, and climb down in search of anything?",
+            "southValue": "Spy a partiularly soft armchair, and rest your eyes permanently in your head?"
+        }, // 2_3
+        {
+            "sceneNum": "3_1",
+            "description": "Dropping languidly, you alight on soft willow beams. The air seems almost thicker here, laden with pollen clouds from tree crests. A knotted bore-hole gate is fixed on the tree, unlocked but unwelcoming. This roost was once frequented, but has held it's breath since the forest's wings grew silent.",
+            "northValue": "Place a calloused palm over a bend in the curling bark, and slide into the chamber within?",
+            "westValue": "Add your own flesh to the gifts lain about the entrance and hung in the surrounding trees?",
+            "eastValue": "Listen for the faint sound of any burning soul-whicks deep and down inside?",
+            "southValue": "Feel need to hold guard before such an ingress, abandoning all other duties ad nauseum?"
+        }, // 3_1
+        {
+            "sceneNum": "3_2",
+            "description": "<div id='a'>You pluck the waxy and deep-set green leaf fronds down from above. Faint grime still holds to their fallen and static surfaces. Though saturation seems washed from their colours, they exude a child-like sense of calm.</div><br><div class='flexrow'><div id='name'>Dust Leaf</div><div id='b'> is added to your inventory.</div></div>",
+            "northValue": "Seek greater fullfillment beyond, where dereliction has not been laid?",
+            "westValue": "Settle yourself in comfort before gorging upon this psilocybic leaflet?",
+            "eastValue": "Having found a worthy keepsake, return to the ever-molding forest floor below?",
+            "southValue": "Let subconcious and survivalist materialism fade along with the viridian hue once again?"
+        }, // 3_2
+        {
+            "sceneNum": "3_3",
+            "description": "Though body breaks through olive flattened sunshade, mind has deserted to somewhere cold and silent: an ashy shallow pool formed in a hidden pocket of high sierra ridges. The basin is silent, yet thunderous in voice.<div class='speech'>[NullPointer Error: will to live not found],</div>",
+            "northValue": "Submerge once more in bitter and unforgiving liquor, dusted lightly in cinders?",
+            "westValue": "Imbide a handful of wood-chime washed water, and attain its stillfulness?",
+            "eastValue": "Rise from crystal waters, and begin the labourous task of slow descent?",
+            "southValue": "Submit your awareness for review, having ended in this unwieldy place?"
+        } // 3_3
     ]
 }
