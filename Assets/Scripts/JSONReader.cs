@@ -1,17 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [System.Serializable]
 public class GameScene
 {
-	public string sceneNum;
-	public string description;
-
-	public string northValue;
-	public string westValue;
-	public string eastValue;
-	public string southValue;
+	public string sceneNum, description, northValue, westValue, eastValue, southValue;
 }
 
 [System.Serializable]
@@ -23,11 +18,16 @@ public class GameScenes
 public class JSONReader : MonoBehaviour
 {
 	public TextAsset jsonFile;
+	public TextMeshProUGUI descriptionText, inputText, northText, westText, eastText, southText;
+
+	private GameScenes allScenes;
 
 	void Start()
 	{
-		//GameScenes allScenes = JsonUtility.FromJson<GameScenes>(jsonFile.text);
-		Debug.Log(jsonFile.text);
+		allScenes = JsonUtility.FromJson<GameScenes>(jsonFile.text);
+
+		loadScene("0");
+		//Debug.Log(allScenes);
 
 		/*
 		foreach (GameScene i in allScenes.gameScenes)
@@ -35,6 +35,21 @@ public class JSONReader : MonoBehaviour
 			Debug.Log("Found scenes: " + i.sceneNum + " " + i.description + " " + i.northValue + " " + i.westValue + " " + i.eastValue + " " + i.southValue);
 		}
         */
+	}
+
+	void loadScene(string givenSceneNum)
+	{
+		foreach (GameScene i in allScenes.gameScenes)
+		{
+			if (i.sceneNum == givenSceneNum)
+			{
+				descriptionText.text = i.description;
+				northText.text = i.northValue;
+				westText.text = i.westValue;
+				eastText.text = i.eastValue;
+				southText.text = i.southValue;
+			}
+		}
 	}
 
 	/*
