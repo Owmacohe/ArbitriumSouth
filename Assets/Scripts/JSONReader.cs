@@ -19,6 +19,7 @@ public class JSONReader : MonoBehaviour
 {
 	public TextAsset jsonFile;
 	public TextMeshProUGUI descriptionText, inputText, northText, westText, eastText, southText;
+	public string sceneNum = "0";
 
 	private GameScenes allScenes;
 
@@ -26,7 +27,7 @@ public class JSONReader : MonoBehaviour
 	{
 		allScenes = JsonUtility.FromJson<GameScenes>(jsonFile.text);
 
-		loadScene("0");
+		loadScene();
 		//Debug.Log(allScenes);
 
 		/*
@@ -37,11 +38,11 @@ public class JSONReader : MonoBehaviour
         */
 	}
 
-	void loadScene(string givenSceneNum)
+	public void loadScene()
 	{
 		foreach (GameScene i in allScenes.gameScenes)
 		{
-			if (i.sceneNum == givenSceneNum)
+			if (i.sceneNum == sceneNum)
 			{
 				descriptionText.text = i.description;
 				northText.text = i.northValue;

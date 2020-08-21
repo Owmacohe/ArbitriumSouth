@@ -11,11 +11,15 @@ public class BackFillProper : MonoBehaviour
     public GameObject fillPrefab;
     public float brightness;
 
+    public GameObject[] backBoxes;
+
     void Start() {
+        backBoxes = new GameObject[1475 / (int)charNum];
+
         float xPlacement = -8.7f;
         float yPlacement = 4.8f;
 
-        for (int i = 0; i < (1475 / charNum) ; i++)
+        for (int i = 0; i < (1475 / charNum); i++)
         {
             var newFill = Instantiate(fillPrefab);
             newFill.transform.SetParent(gameObject.transform);
@@ -31,10 +35,9 @@ public class BackFillProper : MonoBehaviour
                 yPlacement -= (0.4f * charNum);
             }
 
-            byte alpha = (byte)((brightness * 100000) * (1 / CalculateDistance(newFill.transform)));
-            //Debug.Log(alpha);
+            setBrightness(newFill);
 
-            newFill.GetComponent<TextMeshProUGUI>().color = new Color32(10, 255, 10, alpha);
+            backBoxes[i] = newFill;
         }
     }
 
@@ -73,5 +76,11 @@ public class BackFillProper : MonoBehaviour
         }
 
         return Mathf.Pow(boxDistance, 2);
+    }
+
+    public void setBrightness(GameObject givenBox)
+    {
+        byte alpha = (byte)((brightness * 100000) * (1 / CalculateDistance(givenBox.transform)));
+        givenBox.GetComponent<TextMeshProUGUI>().color = new Color32(10, 255, 10, alpha);
     }
 }
