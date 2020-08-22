@@ -838,8 +838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charNum: 1
-  fillPrefab: {fileID: 1810317406481967430, guid: 91a00d49a34fc44e4bf152c19ec53c92, type: 3}
-  brightness: 0.9
+  fillPrefab: {fileID: 7765326602909824243, guid: f568265464e801349b489f28e9944537, type: 3}
+  brightness: 0.8
   backBoxes: []
 --- !u!114 &1236562890
 MonoBehaviour:

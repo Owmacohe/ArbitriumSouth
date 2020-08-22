@@ -1,110 +1,92 @@
-﻿using System.Collections;
+﻿//59 by 25
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class BackFill : MonoBehaviour
 {
-    public int charLength;
-    public GameObject fillPrefab;
-    public SpriteRenderer fadeSprite;
+    public float charNum; //utility variable used to increase/decrease the size of backboxes
+    public GameObject fillPrefab; //backbox prefab
+    public float brightness; //overall brightness of backboxes
+
+    public GameObject[] backBoxes; //array of all the backboxes
 
     void Start()
     {
-        StartCoroutine(waitFade());
+        backBoxes = new GameObject[1475 / (int)charNum]; // sets the length of the backbox array
 
-        float xPlacement = -8.5f;
-        float yPlacement = 4.5f;
+        //initial backbox placement
+        float xPlacement = -8.7f;
+        float yPlacement = 4.8f;
 
-        for (int i = 0; i < charLength; i++)
+        //adds basic components to each created backbox, increments its placement and/or line, sets its brightness, and adds it to the array
+        for (int i = 0; i < (1475 / charNum); i++)
         {
             var newFill = Instantiate(fillPrefab);
-            var textObject = newFill.GetComponent<TextMeshProUGUI>();
             newFill.transform.SetParent(gameObject.transform);
+            newFill.GetComponent<TextMeshProUGUI>().fontSize = (0.5f * charNum);
+            newFill.GetComponent<TextMeshProUGUI>().text = getRandomCharacter("all");
 
             newFill.transform.position = new Vector2(xPlacement, yPlacement);
-            xPlacement += 0.5f;
+            xPlacement += (0.3f * charNum);
 
-            if (i.Equals(34) || i.Equals(69) || i.Equals(104) || i.Equals(139) || i.Equals(174) || i.Equals(209) || i.Equals(244) || i.Equals(279) || i.Equals(314) || i.Equals(349) || i.Equals(384) || i.Equals(419) || i.Equals(454))
+            if (newFill.transform.position.x > 8.7)
             {
-                xPlacement = -8.5f;
-                yPlacement -= 0.75f;
+                xPlacement = -8.7f;
+                yPlacement -= (0.4f * charNum);
             }
 
-            switch (i)
-            {
-                case 72:
-                    newFill.tag = "STag";
-                    break;
-                case 73:
-                    newFill.tag = "tTag";
-                    break;
-                case 74:
-                    newFill.tag = "aTag";
-                    break;
-                case 75:
-                    newFill.tag = "rTag";
-                    break;
-                case 76:
-                    newFill.tag = "tTag";
-                    break;
-                case 77:
-                    newFill.tag = "_Tag";
-                    break;
-                case 98:
-                    newFill.tag = "ETag";
-                    break;
-                case 99:
-                    newFill.tag = "xTag";
-                    break;
-                case 100:
-                    newFill.tag = "iTag";
-                    break;
-                case 101:
-                    newFill.tag = "tTag";
-                    break;
-                case 102:
-                    newFill.tag = "_Tag";
-                    break;
-                case 398:
-                    newFill.tag = "STag";
-                    break;
-                case 399:
-                    newFill.tag = "eTag";
-                    break;
-                case 400:
-                    newFill.tag = "tTag";
-                    break;
-                case 401:
-                    newFill.tag = "tTag";
-                    break;
-                case 402:
-                    newFill.tag = "iTag";
-                    break;
-                case 403:
-                    newFill.tag = "nTag";
-                    break;
-                case 404:
-                    newFill.tag = "gTag";
-                    break;
-                case 405:
-                    newFill.tag = "sTag";
-                    break;
-                case 406:
-                    newFill.tag = "_Tag";
-                    break;
-            }
+            setBrightness(newFill);
+
+            backBoxes[i] = newFill;
         }
     }
 
-    IEnumerator waitFade()
+    //gets a random character from sets of either letters, numbers, both, or both plus extra characters
+    string getRandomCharacter(string givenType)
     {
-        yield return new WaitForSeconds(6);
+        var characters = "";
 
-        for (float i = 0; i < 1.1f; i += 0.1f)
+        switch (givenType)
         {
-            fadeSprite.color = new Color(1, 1, 1, i);
-            yield return new WaitForSeconds(0.075f);
+            case "alpha":
+                characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                break;
+            case "num":
+                characters = "0123456789";
+                break;
+            case "alphaNum":
+                characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                break;
+            case "all":
+                characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%^&*()-=_+`''~[]{}:;,.?/|";
+                break;
         }
+
+        var randomNum = Random.Range(0, characters.Length - 1);
+        return characters[randomNum].ToString();
+    }
+
+    //sets the brightness of the given backbox
+    public void setBrightness(GameObject givenBox)
+    {
+        byte alpha = (byte)((brightness * 100000) * (1 / CalculateDistance(givenBox.transform)));
+        givenBox.GetComponent<TextMeshProUGUI>().color = new Color32(10, 255, 10, alpha);
+    }
+
+    //returns an exponentially decreasing number based on distance from objects tagged "Box"
+    float CalculateDistance(Transform thisPosition)
+    {
+        GameObject[] boxes = GameObject.FindGameObjectsWithTag("Box");
+        float boxDistance = 0;
+
+        for (int i = 0; i < boxes.Length; i++)
+        {
+            boxDistance += Vector2.Distance(thisPosition.position, boxes[i].transform.position);
+        }
+
+        return Mathf.Pow(boxDistance, 2);
     }
 }

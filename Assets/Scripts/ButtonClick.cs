@@ -5,19 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ButtonClick : MonoBehaviour
 {
+    public string targetScene;
+
+    //loads a new scene based on the given string
     void OnMouseDown()
     {
-        switch (gameObject.tag)
+        //if the target scene is "Exit", it just quits
+        if (targetScene == "Exit")
         {
-            case "Start":
-                SceneManager.LoadScene("Prologue");
-                break;
-            case "Exit":
-                Application.Quit();
-                break;
-            case "Settings":
-                SceneManager.LoadScene("Settings");
-                break;
+            Application.Quit();
+            Debug.Log("Game Quit"); //intentionally left after the quit command
         }
+
+        SceneManager.LoadScene(targetScene);
     }
 }
