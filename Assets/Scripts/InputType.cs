@@ -10,6 +10,9 @@ public class InputType : MonoBehaviour
     public JSONReader jsonScript;
     public BackFillProper fillScript;
     public Color32 brightGreen;
+    public int probabNum;
+
+    public Transform northBox, westBox, eastBox, southBox;
 
     void Start()
     {
@@ -18,7 +21,7 @@ public class InputType : MonoBehaviour
 
     void Update()
     {
-        if (gameObject.GetComponent<TextMeshProUGUI>().text.Length < 5)
+        if (inputText.text.Length < 5)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -34,7 +37,7 @@ public class InputType : MonoBehaviour
             {
                 if (Input.GetKeyDown((KeyCode)values[i]) && values[i] > 96 && values[i] < 123)
                 {
-                    gameObject.GetComponent<TextMeshProUGUI>().text += (KeyCode)values[i];
+                    inputText.text += (KeyCode)values[i];
 
                     lightUpLetters();
                 }
@@ -47,12 +50,15 @@ public class InputType : MonoBehaviour
             {
                 case "NORTH":
                     setNewScene("1");
+                    lightUpLetters();
                     break;
                 case "WEST":
                     setNewScene("2");
+                    lightUpLetters();
                     break;
                 case "EAST":
                     setNewScene("3");
+                    lightUpLetters();
                     break;
                 case "SOUTH":
                     //TODO
@@ -84,21 +90,33 @@ public class InputType : MonoBehaviour
 
     void lightUpLetters()
     {
-        string inputText = gameObject.GetComponent<TextMeshProUGUI>().text;
-
-        if (inputText.StartsWith("N") || inputText.StartsWith("W") || inputText.StartsWith("E") || inputText.StartsWith("S"))
+        for (int k = 0; k < fillScript.backBoxes.Length; k++)
         {
-            int inputLength = inputText.Length;
-            int lightNum = inputLength * 50;
+            fillScript.setBrightness(fillScript.backBoxes[k]);
+        }
 
-            for (int k = 0; k < fillScript.backBoxes.Length; k++)
-            {
-                fillScript.setBrightness(fillScript.backBoxes[k]);
-            }
+        if (inputText.text.StartsWith("N") || inputText.text.StartsWith("W") || inputText.text.StartsWith("E") || inputText.text.StartsWith("S"))
+        {
+            int inputLength = inputText.text.Length + 1;
 
-            for (int i = 0; i < lightNum; i++)
+            for (int i = 0; i < fillScript.backBoxes.Length; i++)
             {
-                fillScript.backBoxes[Random.Range(0, fillScript.backBoxes.Length - 1)].GetComponent<TextMeshProUGUI>().color = brightGreen;
+                if (inputText.text.StartsWith("N") && (Vector2.Distance(fillScript.backBoxes[i].transform.position, northBox.position) <= inputLength) && (Random.Range(0, probabNum) == 0))
+                {
+                    fillScript.backBoxes[i].GetComponent<TextMeshProUGUI>().color = brightGreen;
+                }
+                else if (inputText.text.StartsWith("W") && (Vector2.Distance(fillScript.backBoxes[i].transform.position, westBox.position) <= inputLength) && (Random.Range(0, probabNum) == 0))
+                {
+                    fillScript.backBoxes[i].GetComponent<TextMeshProUGUI>().color = brightGreen;
+                }
+                else if (inputText.text.StartsWith("E") && (Vector2.Distance(fillScript.backBoxes[i].transform.position, eastBox.position) <= inputLength) && (Random.Range(0, probabNum) == 0))
+                {
+                    fillScript.backBoxes[i].GetComponent<TextMeshProUGUI>().color = brightGreen;
+                }
+                else if (inputText.text.StartsWith("S") && (Vector2.Distance(fillScript.backBoxes[i].transform.position, southBox.position) <= inputLength) && (Random.Range(0, probabNum) == 0))
+                {
+                    fillScript.backBoxes[i].GetComponent<TextMeshProUGUI>().color = brightGreen;
+                }
             }
         }
     }
