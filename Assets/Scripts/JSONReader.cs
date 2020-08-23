@@ -25,7 +25,7 @@ public class JSONReader : MonoBehaviour
 
 	private GameScenes allScenes; //access to object classes so that we can read from them
 
-	void Start()
+	private void Start()
 	{
 		allScenes = JsonUtility.FromJson<GameScenes>(jsonFile.text); //getting the info from the file
 

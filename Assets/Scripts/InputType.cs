@@ -8,18 +8,22 @@ public class InputType : MonoBehaviour
     private TextMeshProUGUI inputText; //the text field that the player types into
 
     public JSONReader jsonScript; //access to JSON reader script
-    public BackFill fillScript; //access to the bockboxes fill script
+    public BackFill fillScript; //access to the backboxes fill script
 
     public Color32 brightGreen; //standard bright green colour
-    public int probabNum; //probability for a backbox to light up when the player is typing (the lower, the higher the chance)
+    public int probabNum; //probability for a backbox to light up when the player is typing (the lower the number, the higher the chance)
     public Transform northBox, westBox, eastBox, southBox; //transforms of the four directions, to know where to light up near
 
-    void Start()
+    private void Start()
     {
         inputText = gameObject.GetComponent<TextMeshProUGUI>();
+
+        //Makes the cursor invisible and locks it in place
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    private void Update()
     {
         if (inputText.text.Length < 5) //putting a cap on the player's input length
         {

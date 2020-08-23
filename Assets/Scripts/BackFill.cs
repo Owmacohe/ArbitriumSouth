@@ -13,7 +13,7 @@ public class BackFill : MonoBehaviour
 
     public GameObject[] backBoxes; //array of all the backboxes
 
-    void Start()
+    private void Start()
     {
         backBoxes = new GameObject[1475 / (int)charNum]; // sets the length of the backbox array
 
