@@ -45,7 +45,7 @@ public class BackFill : MonoBehaviour
     }
 
     //gets a random character from sets of either letters, numbers, both, or both plus extra characters
-    string getRandomCharacter(string givenType)
+    public string getRandomCharacter(string givenType)
     {
         var characters = "";
 

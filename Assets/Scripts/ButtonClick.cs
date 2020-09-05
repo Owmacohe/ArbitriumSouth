@@ -11,12 +11,14 @@ public class ButtonClick : MonoBehaviour
     private void OnMouseDown()
     {
         //if the target scene is "Exit", it just quits
-        if (targetScene == "Exit")
+        if (targetScene == "Quit")
         {
             Application.Quit();
-            Debug.Log("Game Quit"); //intentionally left after the quit command
+            Debug.Log("Game Quit"); //intentionally left after the quit command for editor debugging
         }
-
-        SceneManager.LoadScene(targetScene);
+        else
+        {
+            SceneManager.LoadScene(targetScene);
+        }
     }
 }

@@ -22,6 +22,7 @@ public class JSONReader : MonoBehaviour
 	public TextAsset jsonFile; //JSON file to read from
 	public TextMeshProUGUI descriptionText, inputText, northText, westText, eastText, southText; //text boxes to write to
 	public string sceneNum = "0"; //current scene number ***VERY IMPORTANT VARIABLE***
+	public float typeSpeed;
 
 	private GameScenes allScenes; //access to object classes so that we can read from them
 
@@ -40,10 +41,41 @@ public class JSONReader : MonoBehaviour
 			if (i.sceneNum == sceneNum)
 			{
 				descriptionText.text = i.description;
+				StartCoroutine(typeText(descriptionText, true));
+
 				northText.text = i.northValue;
+				StartCoroutine(typeText(northText, false));
+
 				westText.text = i.westValue;
+				StartCoroutine(typeText(westText, false));
+
 				eastText.text = i.eastValue;
+				StartCoroutine(typeText(eastText, false));
+
 				southText.text = i.southValue;
+				StartCoroutine(typeText(southText, false));
+			}
+		}
+	}
+
+	//clears the given TMP text, then retypes it
+	IEnumerator typeText(TextMeshProUGUI givenTMPro, bool isDescription)
+	{
+		string tempString = givenTMPro.text;
+		givenTMPro.text = "";
+
+		for (int i = 0; i < tempString.Length; i++)
+		{
+			givenTMPro.text += tempString[i].ToString();
+
+			//if the TMP happens to be the description box, it types it 5 times as fast
+			if (isDescription == true)
+			{
+				yield return new WaitForSeconds(typeSpeed / 5);
+			}
+			else
+			{
+				yield return new WaitForSeconds(typeSpeed);
 			}
 		}
 	}

@@ -29,7 +29,7 @@ public class MenuHover : MonoBehaviour
         //if the backboxes are close to the cursor, if the RNG hits, and if the curor is moving, the backboxes light up
         for (int i = 0; i < fillScript.backBoxes.Length; i++)
         {
-            float boxDistance = Vector2.Distance(fillScript.backBoxes[i].transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            float boxDistance = Vector2.Distance(fillScript.backBoxes[i].transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition)); //distance from the given box to the mouse cursor
 
             if (boxDistance <= glowDistance && Random.Range(0, randNum) == 0 && mouseDelta != new Vector3(0, 0, 0))
             {

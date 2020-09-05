@@ -2048,6 +2048,7 @@ MonoBehaviour:
   eastText: {fileID: 860252144}
   southText: {fileID: 1249613423}
   sceneNum: 0
+  typeSpeed: 0.03
 --- !u!114 &2098658485
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -88,6 +88,12 @@ public class InputType : MonoBehaviour
 
         jsonScript.loadScene();
         inputText.text = "";
+
+        //sets all the backboxes to a new random letter
+        for (int i = 0; i < fillScript.backBoxes.Length; i++)
+        {
+            fillScript.backBoxes[i].GetComponent<TextMeshProUGUI>().text = fillScript.getRandomCharacter("all");
+        }
     }
 
     //when called, lights up the backboxes bright green around a certain direction

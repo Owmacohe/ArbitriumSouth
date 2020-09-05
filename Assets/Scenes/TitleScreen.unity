@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 162343444}
   - component: {fileID: 162343445}
-  - component: {fileID: 162343446}
   - component: {fileID: 162343447}
+  - component: {fileID: 162343446}
   m_Layer: 0
   m_Name: Quit
   m_TagString: Box
@@ -256,8 +256,8 @@ GameObject:
   m_Component:
   - component: {fileID: 418067244}
   - component: {fileID: 418067245}
-  - component: {fileID: 418067246}
   - component: {fileID: 418067247}
+  - component: {fileID: 418067246}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Box
@@ -379,8 +379,8 @@ GameObject:
   m_Component:
   - component: {fileID: 716055568}
   - component: {fileID: 716055569}
-  - component: {fileID: 716055570}
   - component: {fileID: 716055571}
+  - component: {fileID: 716055570}
   m_Layer: 0
   m_Name: Start
   m_TagString: Box
@@ -836,8 +836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c2859be9c9cc64783fe10295bf8b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowDistance: 1.5
-  randNum: 130
+  glowDistance: 2
+  randNum: 200
   brightGreen:
     serializedVersion: 2
     rgba: 4278910730
