@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 16446548}
   m_Layer: 0
   m_Name: Box_East
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 588852822}
   m_Layer: 0
   m_Name: Box_Middle
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 717169573}
   m_Layer: 0
   m_Name: Box_North
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,7 +398,7 @@ Transform:
   m_GameObject: {fileID: 727836536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.005, z: 0}
-  m_LocalScale: {x: 0.19999999, y: 0.05, z: 0}
+  m_LocalScale: {x: 0.19999999, y: 0.02, z: 0}
   m_Children: []
   m_Father: {fileID: 1078069274}
   m_RootOrder: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 1078069275}
   m_Layer: 0
   m_Name: Box_West
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charNum: 1
   fillPrefab: {fileID: 7765326602909824243, guid: f568265464e801349b489f28e9944537, type: 3}
-  brightness: 0.8
+  brightness: -0.25
   backBoxes: []
 --- !u!114 &1236562890
 MonoBehaviour:
@@ -1214,7 +1214,7 @@ Transform:
   m_GameObject: {fileID: 1378861844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.005, z: 0}
-  m_LocalScale: {x: 0.19999997, y: 0.05, z: 0}
+  m_LocalScale: {x: 0.19999997, y: 0.02, z: 0}
   m_Children: []
   m_Father: {fileID: 1840953532}
   m_RootOrder: 0
@@ -1296,7 +1296,7 @@ Transform:
   m_GameObject: {fileID: 1382647833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.0025, z: 0}
-  m_LocalScale: {x: -0.19, y: 0.03, z: 0}
+  m_LocalScale: {x: -0.19, y: 0.012, z: 0}
   m_Children: []
   m_Father: {fileID: 588852821}
   m_RootOrder: 0
@@ -1533,7 +1533,7 @@ GameObject:
   - component: {fileID: 1840953533}
   m_Layer: 0
   m_Name: Box_South
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,7 +1630,7 @@ Transform:
   m_GameObject: {fileID: 1925426541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.005, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.02, z: 1}
   m_Children: []
   m_Father: {fileID: 717169572}
   m_RootOrder: 0
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   fillScript: {fileID: 1236562889}
   brightGreen:
     serializedVersion: 2
-    rgba: 4278910730
+    rgba: 4286513022
   probabNum: 5
   northBox: {fileID: 717169572}
   westBox: {fileID: 1078069274}
@@ -1952,7 +1952,7 @@ Transform:
   m_GameObject: {fileID: 2050089183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.005, z: 0}
-  m_LocalScale: {x: 0.20000003, y: 0.05, z: 0}
+  m_LocalScale: {x: 0.20000003, y: 0.02, z: 0}
   m_Children: []
   m_Father: {fileID: 16446547}
   m_RootOrder: 0

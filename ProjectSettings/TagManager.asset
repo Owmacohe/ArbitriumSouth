@@ -3,25 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Title
-  - tTag
-  - aTag
-  - rTag
-  - xTag
-  - iTag
-  - eTag
-  - nTag
-  - gTag
-  - sTag
-  - STag
-  - ETag
-  - _Tag
-  - MenuParent
-  - Start
-  - Exit
-  - Settings
-  - Box
+  tags: []
   layers:
   - Default
   - TransparentFX

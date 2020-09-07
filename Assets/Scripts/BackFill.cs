@@ -72,21 +72,19 @@ public class BackFill : MonoBehaviour
     //sets the brightness of the given backbox
     public void setBrightness(GameObject givenBox)
     {
-        byte alpha = (byte)((brightness * 100000) * (1 / CalculateDistance(givenBox.transform)));
+        byte alpha = (byte)((100 * brightness) * CalculateDistance(givenBox.transform));
         givenBox.GetComponent<TextMeshProUGUI>().color = new Color32(10, 255, 10, alpha);
     }
 
-    //returns an exponentially decreasing number based on distance from objects tagged "Box"
+    //returns a decreasing number based on distance from the middle
     float CalculateDistance(Transform thisPosition)
     {
-        GameObject[] boxes = GameObject.FindGameObjectsWithTag("Box");
-        float boxDistance = 0;
-
-        for (int i = 0; i < boxes.Length; i++)
-        {
-            boxDistance += Vector2.Distance(thisPosition.position, boxes[i].transform.position);
-        }
+        /*
+        float boxDistance = Vector2.Distance(thisPosition.position, new Vector2(0, 0));
 
         return Mathf.Pow(boxDistance, 2);
+        */
+
+        return Vector2.Distance(thisPosition.position, new Vector2(0, 0));
     }
 }

@@ -90,7 +90,7 @@
         },
         {
             "sceneNum": "3_2",
-            "description": "<style=AltColour>You pluck the waxy and deep-set green leaf fronds down from above. Faint grime still holds to their fallen and static surfaces. Though saturation seems washed from their colours, they exude a child-like sense of calm.\n\n<style=AltColour>Dust Leaf is added to your inventory.</style>",
+            "description": "You pluck the waxy and deep-set green leaf fronds down from above. Faint grime still holds to their fallen and static surfaces. Though saturation seems washed from their colours, they exude a child-like sense of calm.\n\n<style=AltColour>Dust Leaf is added to your inventory.</style>",
             "northValue": "Seek greater fullfillment beyond, where dereliction has not been laid?",
             "westValue": "Settle yourself in comfort before gorging upon this psilocybic leaflet?",
             "eastValue": "Having found a worthy keepsake, return to the ever-molding forest floor below?",
