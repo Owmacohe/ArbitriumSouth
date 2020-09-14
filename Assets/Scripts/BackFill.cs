@@ -16,10 +16,15 @@ public class BackFill : MonoBehaviour
     public GameObject[] backBoxes; //array of all the backboxes
     public JSONReader jsonScript; //access to JSON reader script
     public string infoLetters; //the info to be displayed in the top left corner
+    public bool liveCheck = false;
 
     private void Start()
     {
-        infoLetters = "Scene " + charConvert(jsonScript.sceneNum, "_", "/"); //setting the info
+        //setting the scene path info
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("MainScreen"))
+        {
+            infoLetters = "Scene " + charConvert(jsonScript.sceneNum, "_", "/");
+        }
 
         backBoxes = new GameObject[1475 / (int)charNum]; // sets the length of the backbox array
 
@@ -132,4 +137,14 @@ public class BackFill : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (liveCheck == true)
+        {
+            for (int i = 0; i < backBoxes.Length; i++)
+            {
+                setBrightness(backBoxes[i]);
+            }
+        }
+    }
 }
