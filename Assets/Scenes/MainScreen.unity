@@ -839,8 +839,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charNum: 1
   fillPrefab: {fileID: 7765326602909824243, guid: f568265464e801349b489f28e9944537, type: 3}
-  brightness: -0.25
+  brightness: -25.5
+  glowSource: {fileID: 588852821}
+  mediumGreen:
+    serializedVersion: 2
+    rgba: 4278910730
   backBoxes: []
+  jsonScript: {fileID: 2098658484}
 --- !u!114 &1236562890
 MonoBehaviour:
   m_ObjectHideFlags: 0

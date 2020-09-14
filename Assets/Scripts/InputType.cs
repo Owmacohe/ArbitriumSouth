@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputType : MonoBehaviour
 {
@@ -86,6 +87,12 @@ public class InputType : MonoBehaviour
             jsonScript.sceneNum += "_" + givenNum;
         }
 
+        clearText();
+        lightUpLetters();
+
+        SceneManager.LoadScene("MainScreen");
+
+        /*
         jsonScript.loadScene();
         inputText.text = "";
 
@@ -94,6 +101,17 @@ public class InputType : MonoBehaviour
         {
             fillScript.backBoxes[i].GetComponent<TextMeshProUGUI>().text = fillScript.getRandomCharacter("all");
         }
+        */
+    }
+
+    void clearText()
+    {
+        jsonScript.descriptionText.text = "";
+        inputText.text = "";
+        jsonScript.northText.text = "";
+        jsonScript.westText.text = "";
+        jsonScript.eastText.text = "";
+        jsonScript.southText.text = "";
     }
 
     //when called, lights up the backboxes bright green around a certain direction
@@ -112,7 +130,7 @@ public class InputType : MonoBehaviour
             //loops through every backbox, and if any are near the typed direction, and the RNG hits, they are lit up
             for (int i = 0; i < fillScript.backBoxes.Length; i++)
             {
-                if (Random.Range(0, probabNum) == 0)
+                if (Random.Range(0, probabNum) == 0 && i >= fillScript.infoLetters.Length)
                 {
                     if (inputText.text.StartsWith("N") && (Vector2.Distance(fillScript.backBoxes[i].transform.position, northBox.position) <= inputLength))
                     {

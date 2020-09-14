@@ -21,10 +21,34 @@ public class JSONReader : MonoBehaviour
 {
 	public TextAsset jsonFile; //JSON file to read from
 	public TextMeshProUGUI descriptionText, inputText, northText, westText, eastText, southText; //text boxes to write to
-	public string sceneNum = "0"; //current scene number ***VERY IMPORTANT VARIABLE***
-	public float typeSpeed;
+	public string sceneNum; //current scene number ***VERY IMPORTANT VARIABLE***
+	public string startingNum = "0"; //lets the game know what scene to start on
+	public float typeSpeed; //the speed at which the letters of the scenes type themselves
 
 	private GameScenes allScenes; //access to object classes so that we can read from them
+
+	private bool isApplicationQuitting = false;
+
+	//when the game stops for real, it clears the saved sceneNum
+	private void OnApplicationQuit()
+	{
+		isApplicationQuitting = true;
+		PlayerPrefs.SetString("sceneNum", startingNum);
+	}
+
+	//saves the sceneNum between scene reloads mid game
+	private void OnDisable()
+	{
+		if (isApplicationQuitting) { return; }
+
+		PlayerPrefs.SetString("sceneNum", sceneNum);
+	}
+
+	//gets the sceneNum when the scene is reloaded mid game
+	private void OnEnable()
+	{
+		sceneNum = PlayerPrefs.GetString("sceneNum");
+	}
 
 	private void Start()
 	{
