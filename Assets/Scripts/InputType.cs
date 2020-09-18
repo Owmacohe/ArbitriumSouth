@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿//***************************************************************************
+//
+//Design, programming, and art by: Owen Hellum
+//Alpha "completed" as of 17/09/2020
+//Visit Arbitrium South's itch.io page at: https://omch.itch.io/arbitrium
+//
+//***************************************************************************
+
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -44,7 +52,7 @@ public class InputType : MonoBehaviour
             }
         }
 
-        //when the player confirms their choice, it loads the new scene based on what's in the input (see setNewScene method below)
+        //when the player confirms their choice, it loads the new scene based on what's in the input
         if (Input.GetKeyDown(KeyCode.Return))
         {
             switch (inputText.text)
@@ -60,6 +68,9 @@ public class InputType : MonoBehaviour
                 case "EAST":
                     setNewScene("3");
                     lightUpLetters();
+                    break;
+                case "MENU":
+                    SceneManager.LoadScene("TitleScreen");
                     break;
                 case "SOUTH":
                     //TODO

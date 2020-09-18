@@ -1,4 +1,10 @@
-﻿//59 by 25
+﻿//***************************************************************************
+//
+//Design, programming, and art by: Owen Hellum
+//Alpha "completed" as of 17/09/2020
+//Visit Arbitrium South's itch.io page at: https://omch.itch.io/arbitrium
+//
+//***************************************************************************
 
 using System.Collections;
 using System.Collections.Generic;
@@ -12,11 +18,12 @@ public class BackFill : MonoBehaviour
     public GameObject fillPrefab; //backbox prefab
     public float brightness; //overall brightness of backboxes
     public Transform glowSource; // where the background glow should be coming from
-    public Color32 mediumGreen; //the bright (but not oversaturated) green used for the scene info in the top left corner
     public GameObject[] backBoxes; //array of all the backboxes
+    public bool liveCheck = false; //when on in the editor, allows me to preview backbox brightness when in play mode
+
+    public Color32 mediumGreen; //the bright (but not oversaturated) green used for the scene info in the top left corner
     public JSONReader jsonScript; //access to JSON reader script
     public string infoLetters; //the info to be displayed in the top left corner
-    public bool liveCheck = false;
 
     private void Start()
     {
@@ -24,6 +31,10 @@ public class BackFill : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("MainScreen"))
         {
             infoLetters = "Scene " + charConvert(jsonScript.sceneNum, "_", "/");
+        }
+        else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("TitleScreen"))
+        {
+            PlayerPrefs.SetString("sceneNum", "0");
         }
 
         backBoxes = new GameObject[1475 / (int)charNum]; // sets the length of the backbox array

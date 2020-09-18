@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿//***************************************************************************
+//
+//Design, programming, and art by: Owen Hellum
+//Alpha "completed" as of 17/09/2020
+//Visit Arbitrium South's itch.io page at: https://omch.itch.io/arbitrium
+//
+//***************************************************************************
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -12,12 +20,14 @@ public class MenuHover : MonoBehaviour
     public Color32 brightGreen; //standard bright green colour
 
     //variables for helpint to determine whether the cursor is moving or not
-    private Vector3 mouseDelta = Vector3.zero;
-    private Vector3 lastMousePosition = Vector3.zero;
+    private Vector3 mouseDelta = Vector3.zero, lastMousePosition = Vector3.zero;
 
     private void Start()
     {
         fillScript = gameObject.GetComponent<BackFill>();
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void Update()

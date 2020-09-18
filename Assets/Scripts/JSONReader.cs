@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿//***************************************************************************
+//
+//Design, programming, and art by: Owen Hellum
+//Alpha "completed" as of 17/09/2020
+//Visit Arbitrium South's itch.io page at: https://omch.itch.io/arbitrium
+//
+//***************************************************************************
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -47,6 +55,11 @@ public class JSONReader : MonoBehaviour
 	//gets the sceneNum when the scene is reloaded mid game
 	private void OnEnable()
 	{
+		if (PlayerPrefs.GetString("sceneNum") == null)
+		{
+			PlayerPrefs.SetString("sceneNum", startingNum);
+		}
+
 		sceneNum = PlayerPrefs.GetString("sceneNum");
 	}
 
