@@ -6,11 +6,11 @@
   - [x] 1_1: The Soot Hall
     - [x] 1_1_1: Ceaseless Monotony
     - [x] 1_1_2: Reverence For The Low
-    - [ ] 1_1_3: 
+    - [x] 1_1_3: Refusal To Sleep
   - [x] 1_2: Company Of Ghosts
-    - [ ] 1_2_1: 
-    - [ ] 1_2_2: 
-    - [ ] 1_2_3: 
+    - [x] 1_2_1: Poplar Directories
+    - [x] 1_2_2: Rehearsed Aggressions
+    - [x] 1_2_3: A Thinking Tear
   - [x] 1_3: Loam Coffin
     - [ ] 1_3_1: 
     - [ ] 1_3_2: 

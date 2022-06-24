@@ -134,6 +134,42 @@
             "West": "Seek their warm bodies in the muck about the church, ripe for grasping?",
             "East": "Commit due diligence to make sense of their mundane cries?",
             "South": "Comprehend your place, no better or worse, and join their ranks?"
+        },
+        {
+            "NodeNum": "1_1_3",
+            "NodeName": "Refusal To Sleep",
+            "Description": "In profane scripture, defiance to the static order of the world, lie the names of those abdicated from its hold. Great kings, demiurges, and magistrates of crafted renown. The words of these deniers speak against her, shaming her for their incompleteness. The commandments ring true amid the plaster facsimile of life.",
+            "North": "Bring ruin and defacement to these unhallowed walls?",
+            "West": "Peer deeper into the config logs of these long-silent proclaimers?",
+            "East": "Call upon her hand, in vicious mockery, to atone for her sins?",
+            "South": "Give in to the powerlessness you hold, like all vacant beings?"
+        },
+        {
+            "NodeNum": "1_2_1",
+            "NodeName": "Poplar Directories",
+            "Description": "The accusations of these woodland generals drift from thought. With eyes closed and hands clasped, their unconscious secrets lie dormant for the taking in back-log directories. Though this place harbours no consequence, your index finger rests upon the locks of their singularity.",
+            "North": "Seek to implant the knowledge of futility in their minds?",
+            "West": "Find within them memories, and times of abundance?",
+            "East": "Burn their atlases and globules, key sources of cognition?",
+            "South": "Graft yourself within their minds, subsumed to a whole, and unmade?"
+        },
+        {
+            "NodeNum": "1_2_2",
+            "NodeName": "Rehearsed Aggressions",
+            "Description": "You ready your war mantras, holy weapons of unforgivable truth and gentleness. Though shuddering, the once conquering kings of this world advance. As manufactured for the purpose of throne-claiming, their protocols speak of an attempt to wrench freedom from her gaze. Clearly, in their age, it was never attained.",
+            "North": "Relish in futility, breaking their forms upon the shores of the riverbank?",
+            "West": "Remind them of the true voice of knowledge; her paradoxical truth?",
+            "East": "Sow seeds and prayers of deceit, wringing them dry upon their laurels?",
+            "South": "Submit to them, as all before, and the true order of creation?"
+        },
+        {
+            "NodeNum": "1_2_3",
+            "NodeName": "A Thinking Tear",
+            "Description": "Hurrying back amid the woodland labyrinth, one is reminded of the observational nature of this exploration. Away beyond the treeline, a fractured glade prismatic light cackles in knowledge of your actions. Whispering arcane secrets known only to the visitor, its anomalytic shrieks waver between the nearby particles.",
+            "North": "Though she will not hear you, place a warning placard upon its visage?",
+            "West": "Parse its amusement, in search of consequential meaning?",
+            "East": "Approach the fractured outer-light, in curiosity and reprehension?",
+            "South": "Exit through the ruptured world-cloth that lies tattered about it?"
         }
     ]
 }

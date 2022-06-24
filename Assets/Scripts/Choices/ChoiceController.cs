@@ -60,11 +60,11 @@ public class ChoiceController : MonoBehaviour
             }
             
             description.text = temp.Description;
-            north.text = temp.North;
-            south.text = "<wiggle a=0.08>" + temp.South + "</wiggle>";
-            west.text = temp.West;
-            east.text = temp.East;
-            nodeName.text = temp.NodeName.ToUpper();
+            north.text = CheckAndFormat(temp.North);
+            south.text = "<wiggle a=0.08>" + CheckAndFormat(temp.South) + "</wiggle>";
+            west.text = CheckAndFormat(temp.West);
+            east.text = CheckAndFormat(temp.East);
+            nodeName.text = CheckAndFormat(temp.NodeName.ToUpper());
             
             currentPath = target;
         }
@@ -72,6 +72,16 @@ public class ChoiceController : MonoBehaviour
         inv.UpdateInventory(currentPath);
         
         FindObjectOfType<TextTimeline>().Reset();
+    }
+
+    string CheckAndFormat(string str)
+    {
+        /*
+        if (str.Contains("she") || str.Contains("her"))
+        {
+            
+        }
+        */
     }
 
     void AddToInventory()
