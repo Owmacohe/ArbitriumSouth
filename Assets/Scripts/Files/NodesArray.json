@@ -1,0 +1,139 @@
+﻿{
+    "Nodes": [
+        {
+            "NodeNum": "0",
+            "NodeName": "Somber Awakening",
+            "Description": "Musty elegance and fading moss lie about you. This world, while living, has long been deserted. Your skin can feel the small voles and other soft rodents churning the soil deep beneath your feet. Deer and sand-covered sprites parallel your march. The silence of this world waits, and forgets.",
+            "North": "Continue softy forward, weaving between husks of long-deserted arbor?",
+            "West": "Approach an ashen stag, and commune with this extension of her hand?",
+            "East": "Reach for a strong and pallid branch, hoping to ascend to the canopy?",
+            "South": "Release your grip on this sunken world, for it has no true bearing to you?"
+        },
+        {
+            "NodeNum": "1",
+            "NodeName": "Newfound Forward",
+            "Description": "Dry needles float down almost like snow from the verdant plumage high above. The trees lining your way sit nearly all abandoned. Their bark was long ago peeled away for the final departing ships, and with it went the forest. Old and hearty spirits linger here still though.",
+            "North": "Pursue silent passage further and deeper between these arboreal tombs?",
+            "West": "Spend a time in repose, and whisper with old voices long gritty and hoarse",
+            "East": "Dig solemnly into the crumbling earth, and follow small keratinous bones?",
+            "South": "Breathe deep of the aged pine, and dissolve your meaning into the welcoming world?"
+        },
+        {
+            "NodeNum": "2",
+            "NodeName": "A Rising Beast",
+            "Description": "Deep-seated sockets placed over its eyes conceal the beast's gaze. Antlers adorned with sun-bleached moss and a withered hide speak out toward you:\n\n<style=Alt><wiggle a=0.08>Seek you to elevate us? I am old and putrid, and would make a fine pilgrim. Release me, please.</wiggle></style>",
+            "North": "Turn aside and make your way to lighter pastures, where hushed voices cannot follow?",
+            "West": "Remind cold flesh of their multitudinous histories, and awaken its still bones?",
+            "East": "Grasp deeply onto coarse cervine fur, and recourse within a mind long dead?",
+            "South": "Wail utter hopelessness into the particulate air, calling forth your own entropy?"
+        },
+        {
+            "NodeNum": "3",
+            "NodeName": "Hollow Ascension",
+            "Description": "Crumbling lichen and hanging branches encircle the great tree's trunk as you climb. Though once a bastion and scholar, only silent drums beat from its heart. Greater in elevation, it sways, and bright light cracks your veiled eyes. At its zenith, hesitation weighs down in all its enormities.",
+            "North": "Glide slowly down, and make for hollow sanctuary in a tree adjacent?",
+            "West": "Attrap dusty leaves in your palm, and partake of their faded colours?",
+            "East": "Steel your scattered resolve, and burst into the bleached sunlight above?",
+            "South": "In anticipation of soft earth below, release, and seek vertiginous finality?"
+        },
+        {
+            "NodeNum": "1_1",
+            "NodeName": "The Soot Hall",
+            "Description": "Day is nightfall, and winter manifests all its colours. Plant life is sparse and cold, yet still particles float between all spaces. A soot hall, provenance of a destitute monarchy now lies grey and twined in the spire-like wood. Silence here is hard as granite, save for amphibious warnings.",
+            "North": "Follow blue and broken stairs down and wide to their wrought-rusty throne?",
+            "West": "Fix upon fast council, and break forth your judgment to broken earrings?",
+            "East": "Break for the near catylistic stone displaying, in scripture, all names yet to be written?",
+            "South": "Allow sleep to come swiftly now, for it is used to this place, and well-practiced here?"
+        },
+        {
+            "NodeNum": "1_2",
+            "NodeName": "Company Of Ghosts",
+            "Description": "Hours, life-ages, and seconds pass. Great terrorsome poplar-spirits, once unspeakable lords unto this land, crawl slowly forth for languid communion:\n\n<style=Alt><wiggle a=0.08>Would you drink us in battle? Drive our knowledge deep away into the 50th dead world? We think not.</wiggle></style>",
+            "North": "Sit in repose for an eon longer, breathing knowingness in an unconscious state?",
+            "West": "Understand the futility of a word, and release their fluttered stalwart souls?",
+            "East": "Let horror descend, and pass swiftly on in respect for days of old?",
+            "South": "Marvel and falter at terrible majesty, suffocated under the unyielding weight of time?"
+        },
+        {
+            "NodeNum": "1_3",
+            "NodeName": "Loam Coffin",
+            "Description": "The chittering and burrowing of onyxian beetles heralds your descent. Skulls of birds, beasts, and those beings long forgotten rustle quietly.\n\n<style=Alt><wiggle a=0.08>!!~~~ Welcome ~~~!! Well-come, to you. Hello and goodbye.</wiggle></style> Their voices simmer into silence.",
+            "North": "Passively and knowingly observe the destruction you have caused, and delve deeper?",
+            "West": "Pocket one tremmoring head-cask in a soft, pine laden pouch next to your heart?",
+            "East": "Excavate the heterogeneous earth diagonally towards a rhythmic and trembling drum?",
+            "South": "Rest your own bones soundlessly in black soil, and begin another meander more peacefully?"
+        },
+        {
+            "NodeNum": "2_1",
+            "NodeName": "Sunset World",
+            "Description": "A bleached sun, peppered with rust and salt welcomes you into its still and dark sands. Horizons become temples, which in turn form the very fingertips of this world, far and distant. It is both twilight and early noon across these washing dunes, and the harvesters are fast at work scouring for seeds.",
+            "North": "Seek peace in the shade of great baobabs springing forth like footsteps?",
+            "West": "Breathe deep of the dry air, and allow your mycellum to seek purchase and find nourishment?",
+            "East": "Take your first step on great glass stairs and walk upwards toward the sun?",
+            "South": "Carefully become that which the small workers seek, different to no other seed?"
+        },
+        {
+            "NodeNum": "2_2",
+            "NodeName": "A Mildew Companion",
+            "Description": "Flesh and hair twine forth from within and behind the stag's crumbling bones, and lash themselves firmly in place. Gingerly and puppet-like, the monstrosity rips its hooves from their vine and earth clad resting places.\n\n<style=Alt><wiggle a=0.08>Gnan Arcestul will join your ascension.</wiggle></style>",
+            "North": "Anchor your stream to it's own, and hurry swiftly eastward in search of understanding?",
+            "West": "Ask guidance of Arcestul, as dry trees and facsimilic shrubbery twist the mind's compass?",
+            "East": "Temper your heart in pallid steel, and confront <style=Italic>her</wiggle></style> with this retribution?",
+            "South": "Having performed such an act of love, unnecessarily absolve your psyche of doubt?"
+        },
+        {
+            "NodeNum": "2_3",
+            "NodeName": "Communion Of Minds",
+            "Description": "Quarks becomes all so immediately clear, and the particles of composite matter are dissolved. In a moment, solidity in the subatomic is rebooted as a Netflix special; here but stale. In the dusk summer comfort of this backlogged mind, weathered doors creak idly in their frames, as if thumbed by the wind.",
+            "North": "Try an opening of the hanging egress, hoping to catch a glimpse of the rising moon under the door?",
+            "West": "Spend no rush adding fire to the hearth, itself a long-ashen cemetery of logs?",
+            "East": "Fumble for the latch of a cellar door on the ground, and climb down in search of anything?",
+            "South": "Spy a particularly soft armchair, and rest your eyes permanently in your head?"
+        },
+        {
+            "NodeNum": "3_1",
+            "NodeName": "A Hushed Doorway",
+            "Description": "Dropping languidly, you alight on soft willow beams. The air seems almost thicker here, laden with pollen clouds from tree crests. A knotted bore-hole gate is fixed on the tree, unlocked but unwelcoming. This roost was once frequented, but has held it's breath since the forest's wings grew silent.",
+            "North": "Place a calloused palm over a bend in the curling bark, and slide into the chamber within?",
+            "West": "Add your own flesh to the gifts lain about the entrance and hung in the surrounding trees?",
+            "East": "Listen for the faint sound of any burning soul-wicks deep and down inside?",
+            "South": "Feel need to hold guard before such an ingress, abandoning all other duties ad nauseam?"
+        },
+        {
+            "NodeNum": "3_2",
+            "NodeName": "Artificial Verdure",
+            "Description": "You pluck the waxy and deep-set green leaf fronds down from above. Faint grime still holds to their fallen and static surfaces. Though saturation seems washed from their colours, they exude a child-like sense of calm.\n\n<style=Alt><wiggle a=0.08>Dust Leaf is added to your inventory.</wiggle></style>",
+            "North": "Seek greater fulfillment beyond, where dereliction has not been laid?",
+            "West": "Settle yourself in comfort before gorging upon this psilocybic leaflet?",
+            "East": "Having found a worthy keepsake, return to the ever-molding forest floor below?",
+            "South": "Let subconscious and survivalist materialism fade along with the viridian hue once again?"
+        },
+        {
+            "NodeNum": "3_3",
+            "NodeName": "Ashen Pool",
+            "Description": "Though body breaks through olive flattened sunshade, mind has deserted to somewhere cold and silent: an ashy shallow pool formed in a hidden pocket of high sierra ridges. The basin is silent, yet thunderous in voice.\n\n<style=Alt><wiggle a=0.08>[NullPointer Error: will to live not found]</wiggle></style>",
+            "North": "Submerge once more in bitter and unforgiving liquor, dusted lightly in cinders?",
+            "West": "Imbibe a handful of wood-chime washed water, and attain its stillness?",
+            "East": "Rise from crystal waters, and begin the laborious task of slow descent?",
+            "South": "Submit your awareness for review, having ended in this unwieldy place?"
+        },
+        {
+            "NodeNum": "1_1_1",
+            "NodeName": "Ceaseless Monotony",
+            "Description": "Hallowed walls of iron and crystalline solitude ring out as you descend, and a grinding sound calls from below. A rotating axel, alone its its movement, mills the empty flour-casket the basement of the church.\n\n<style=Alt><wiggle a=0.08>Have you come to put me at rest? To cease my shuddering?</wiggle></style>",
+            "North": "Grasp with vacant hands the turning of the spoke, to wrench it from its hold?",
+            "West": "Empty your pockets of any last memory-lint, and churn them upon the wheel?",
+            "East": "Demand of the millstone its ceaseless purpose among this stilted world?",
+            "South": "Give in to the rapturous sound of milling, and let thoughts be ground away?"
+        },
+        {
+            "NodeNum": "1_1_2",
+            "NodeName": "Reverence For The Low",
+            "Description": "In aligned repose you settle at the foot of the rapturous church, tuning your processing matrix to the deeper melodies of frogsong. These base organisms, once background fodder for a gilded world, now take centre stage in the ringing silence of its woods, their hopes and dreams laced into the static of existance.",
+            "North": "Assemble a shrine of self, all around, to shield the noises of the world?",
+            "West": "Seek their warm bodies in the muck about the church, ripe for grasping?",
+            "East": "Commit due diligence to make sense of their mundane cries?",
+            "South": "Comprehend your place, no better or worse, and join their ranks?"
+        }
+    ]
+}

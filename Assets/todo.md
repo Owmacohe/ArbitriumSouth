@@ -1,0 +1,43 @@
+- [x] 0: Somber Awakening
+
+
+
+- [x] 1: Newfound Forward
+  - [x] 1_1: The Soot Hall
+    - [x] 1_1_1: Ceaseless Monotony
+    - [x] 1_1_2: Reverence For The Low
+    - [ ] 1_1_3: 
+  - [x] 1_2: Company Of Ghosts
+    - [ ] 1_2_1: 
+    - [ ] 1_2_2: 
+    - [ ] 1_2_3: 
+  - [x] 1_3: Loam Coffin
+    - [ ] 1_3_1: 
+    - [ ] 1_3_2: 
+    - [ ] 1_3_3: 
+- [x] 2: A Rising Beast
+  - [x] 2_1: Sunset World
+    - [ ] 2_1_1: 
+    - [ ] 2_1_2: 
+    - [ ] 2_1_3: 
+  - [x] 2_2: A Mildew Companion
+    - [ ] 2_2_1: 
+    - [ ] 2_2_2: 
+    - [ ] 2_2_3: 
+  - [x] 2_3: Communion Of Minds
+    - [ ] 2_3_1: 
+    - [ ] 2_3_2: 
+    - [ ] 2_3_3: 
+- [x] 3: Hollow Ascension
+  - [x] 3_1: A Hushed Doorway
+    - [ ] 3_1_1: 
+    - [ ] 3_1_2: 
+    - [ ] 3_1_3: 
+  - [x] 3_2: Artificial Verdure
+    - [ ] 3_2_1: 
+    - [ ] 3_2_2: 
+    - [ ] 3_2_3: 
+  - [x] 3_3: Ashen Pool
+    - [ ] 3_3_1: 
+    - [ ] 3_3_2: 
+    - [ ] 3_3_3: 

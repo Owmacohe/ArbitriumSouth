@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7722497215583794139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7722497215583794138}
+  - component: {fileID: 7722497215583794141}
+  - component: {fileID: -3750735871831348015}
+  m_Layer: 0
+  m_Name: Music Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7722497215583794138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7722497215583794139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7722497215583794141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7722497215583794139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c96d18b959498ebf6620d1a9454cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatInterval: 3.5
+  beats:
+  - {fileID: 8300000, guid: 89bc1df419fe21f44a1b8e0155c007ef, type: 3}
+  - {fileID: 8300000, guid: cb68f48c394f6a646b8ea0985c8c24be, type: 3}
+  - {fileID: 8300000, guid: c560ec725e4371c4eb5b85c3a4ba1cfc, type: 3}
+  - {fileID: 8300000, guid: 7765ea07f2a867749a4f3b2a1d53e4e0, type: 3}
+  - {fileID: 8300000, guid: 86e2aafd5e70beb458515152c6ace481, type: 3}
+  fillers:
+  - {fileID: 8300000, guid: 869917f866b34e346a16415927b98555, type: 3}
+  - {fileID: 8300000, guid: 0e4193b62cf23de4ba9c246294049c86, type: 3}
+  - {fileID: 8300000, guid: 80cb3ca918dbe9d489a5f97971513dd1, type: 3}
+  - {fileID: 8300000, guid: 6fcf3016bad4dd54fb42ba0755551053, type: 3}
+  - {fileID: 8300000, guid: 15446d4bf71f86e46bc1fd38dfb78c1c, type: 3}
+--- !u!114 &-3750735871831348015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7722497215583794139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fea007eaaee40dab5350e4d99fc4aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

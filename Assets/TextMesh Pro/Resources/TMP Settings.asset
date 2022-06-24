@@ -20,8 +20,8 @@ MonoBehaviour:
   m_EnableRaycastTarget: 1
   m_GetFontFeaturesAtRuntime: 1
   m_missingGlyphCharacter: 0
-  m_warningsDisabled: 1
-  m_defaultFontAsset: {fileID: 11400000, guid: d112e49d6af62421ebf69ca043f1a497, type: 2}
+  m_warningsDisabled: 0
+  m_defaultFontAsset: {fileID: 11400000, guid: 44d3d2dc463542d4bbd2b3e92860101f, type: 2}
   m_defaultFontAssetPath: Fonts & Materials/
   m_defaultFontSize: 36
   m_defaultAutoSizeMinRatio: 0.5
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_enableEmojiSupport: 1
   m_MissingCharacterSpriteUnicode: 0
   m_defaultColorGradientPresetsPath: Color Gradient Presets/
-  m_defaultStyleSheet: {fileID: 11400000, guid: c502b062df4d80a489f88f5d4890532c, type: 2}
+  m_defaultStyleSheet: {fileID: 11400000, guid: 91758d7e5e08faa4ba6f3b61cf18f6fa, type: 2}
   m_StyleSheetsResourcePath: 
   m_leadingCharacters: {fileID: 4900000, guid: d82c1b31c7e74239bff1220585707d2b, type: 3}
   m_followingCharacters: {fileID: 4900000, guid: fade42e8bc714b018fac513c043d323b, type: 3}
