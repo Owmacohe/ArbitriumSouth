@@ -18,6 +18,8 @@ public class ButtonHover : MonoBehaviour
 
     void Update()
     {
+        //print(hovering);
+    
         if (Input.GetMouseButtonDown(0) && hovering)
         {
             butt.onClick.Invoke();

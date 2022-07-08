@@ -11,31 +11,28 @@ public class TextTimeline : MonoBehaviour
     [SerializeField] GameObject[] texts;
 
     int current;
+    GenerateBackgroundText background;
 
     void Start()
     {
-        foreach (GameObject i in texts)
-        {
-            if (!isMainScene)
-            {
-                i.SetActive(false);
-            }
-            
-            if (!i.GetComponentInChildren<Button>())
-            {
-                i.GetComponent<TMP_Text>().text += "<?event>";
-                i.GetComponent<TextAnimator>().onEvent += GoToNext;
-            }
-        }
-
-        if (!isMainScene)
-        {
-            GoToNext();
-        }
+        Reset();
     }
 
     public void Reset()
     {
+        if (isMainScene)
+        {
+            if (background == null)
+            {
+                background = FindObjectOfType<GenerateBackgroundText>();
+            }
+            
+            if (background != null)
+            {
+                background.WaitSetColours(GenerateBackgroundText.Layouts.FullMain); 
+            }
+        }
+
         current = 0;
         
         foreach (GameObject i in texts)
@@ -45,6 +42,7 @@ public class TextTimeline : MonoBehaviour
             if (!i.GetComponentInChildren<Button>())
             {
                 i.GetComponent<TMP_Text>().text += "<?event>";
+                i.GetComponent<TextAnimator>().onEvent += GoToNext;
             }
         }
 
@@ -53,26 +51,52 @@ public class TextTimeline : MonoBehaviour
 
     void GoToNext(string message = "event")
     {
-        foreach (ButtonHover i in FindObjectsOfType<ButtonHover>())
-        {
-            i.StopHovering();
-        }
+        Invoke(nameof(StopAllHovering), 0.01f);
         
         if (current < texts.Length)
         {
-            texts[current].SetActive(true);
+            texts[current].SetActive(true); // TODO: this flickers before the TextAnimator picks it up and starts typing
 
             current++;
 
             if (isMainScene && current > 1)
             {
-                GoToNext();
+                ShowAll();
+                return;
             }
             
             if (!isMainScene && texts[current-1].GetComponentInChildren<Button>())
             {
                 GoToNext();
             }
+        }
+    }
+
+    void ShowAll()
+    {
+        if (background != null)
+        {
+            background.WaitSetColours(GenerateBackgroundText.Layouts.Main);   
+        }
+
+        Invoke(nameof(StopAllHovering), 0.01f);
+        
+        foreach (GameObject i in texts)
+        {
+            if (!i.GetComponentInChildren<Button>())
+            {
+                i.GetComponent<TextAnimator>().onEvent -= GoToNext;
+            }
+            
+            i.SetActive(true);
+        }
+    }
+
+    void StopAllHovering()
+    {
+        foreach (ButtonHover i in FindObjectsOfType<ButtonHover>())
+        {
+            i.StopHovering();
         }
     }
 }

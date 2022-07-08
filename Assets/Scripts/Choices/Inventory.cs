@@ -48,7 +48,7 @@ public class Inventory : MonoBehaviour
         GameObject temp = Instantiate(itemPrefab, layout);
         temp.GetComponentsInChildren<Image>()[1].sprite = inventorySprites[index];
         temp.AddComponent<FadeIn>().wait = 0;
-            
+
         GameObject button = temp.GetComponentInChildren<BoxCollider2D>().gameObject;
         //button.GetComponent<Button>().onClick.AddListener();
             

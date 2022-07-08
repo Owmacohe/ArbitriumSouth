@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,11 @@ public class ChoiceController : MonoBehaviour
 
     public void MakeChoice(string direction)
     {
+        for (int i = 0; i < itemIndexQueue.Count; i++)
+        {
+            StartCoroutine(AddToInventory(true));
+        }
+        
         if (currentPath.Equals("0"))
         {
             SetUI(direction);
@@ -37,21 +43,21 @@ public class ChoiceController : MonoBehaviour
 
     void SetUI(string target)
     {
-        if (inv.items == null)
-        {
-            inv.SetItemsArray();
-        }
-
         Node temp = nodes.GetNode(target);
 
         if (temp != null)
         {
+            if (inv.items == null)
+            {
+                inv.SetItemsArray();
+            }
+
             for (int i = 0; i < inv.items.Length; i++)
             {
                 if (temp.NodeNum.Equals(inv.items[i].Origin))
                 {
                     itemIndexQueue.Add(i);
-                    Invoke(nameof(AddToInventory), 16);
+                    StartCoroutine(AddToInventory(false));
                 }
                 else if (temp.NodeNum.Equals(inv.items[i].Target))
                 {
@@ -67,15 +73,20 @@ public class ChoiceController : MonoBehaviour
             nodeName.text = temp.NodeName.ToUpper();
             
             currentPath = target;
-        }
 
-        inv.UpdateInventory(currentPath);
+            inv.UpdateInventory(currentPath);
         
-        FindObjectOfType<TextTimeline>().Reset();
+            FindObjectOfType<TextTimeline>().Reset();   
+        }
     }
 
-    void AddToInventory()
+    IEnumerator AddToInventory(bool immediate)
     {
+        if (!immediate)
+        {
+            yield return new WaitForSeconds(16);
+        }
+
         inv.AddToInventory(itemIndexQueue[0]);
         itemIndexQueue.RemoveAt(0);
     }

@@ -34,25 +34,28 @@ public class SceneController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name.Equals("Entry") || scene.name.Equals("Ending"))
+        if (background != null)
         {
-            background.WaitSetColours(GenerateBackgroundText.Layouts.Entry);
-            background.changesPerFrame = 200;
-        }
-        else if (scene.name.Equals("Prologue"))
-        {
-            background.WaitSetColours(GenerateBackgroundText.Layouts.Prologue);
-            background.changesPerFrame = 100;
-        }
-        else if (scene.name.Equals("Main Scene"))
-        {
-            background.WaitSetColours(GenerateBackgroundText.Layouts.Main);
-            background.changesPerFrame = 10;
-        }
-        else if (scene.name.Equals("Epilogue"))
-        {
-            background.WaitSetColours(GenerateBackgroundText.Layouts.Epilogue);
-            background.changesPerFrame = 100;
+            if (scene.name.Equals("Entry") || scene.name.Equals("Ending"))
+            {
+                background.WaitSetColours(GenerateBackgroundText.Layouts.Entry);
+                background.changesPerFrame = 200;
+            }
+            else if (scene.name.Equals("Prologue"))
+            {
+                background.WaitSetColours(GenerateBackgroundText.Layouts.Prologue);
+                background.changesPerFrame = 100;
+            }
+            else if (scene.name.Equals("Main Scene"))
+            {
+                background.WaitSetColours(GenerateBackgroundText.Layouts.Main);
+                background.changesPerFrame = 10;
+            }
+            else if (scene.name.Equals("Epilogue"))
+            {
+                background.WaitSetColours(GenerateBackgroundText.Layouts.Epilogue);
+                background.changesPerFrame = 100;
+            }   
         }
 
         foreach (GameObject i in GameObject.FindGameObjectsWithTag("UI"))
