@@ -9,8 +9,11 @@ public class ColliderOffset : MonoBehaviour
         colliderTransform = GetComponent<RectTransform>();
         parentTransform = colliderTransform.parent.gameObject.GetComponent<RectTransform>();
         offsetTransform = parentTransform.parent.gameObject.GetComponent<RectTransform>();
+        
+        Vector2 pos = offsetTransform.TransformPoint(parentTransform.anchoredPosition);
+        colliderTransform.localPosition = new Vector3(pos.x * 18f, pos.y * 28f);
     }
-
+    
     void FixedUpdate()
     {
         Vector2 pos = offsetTransform.TransformPoint(parentTransform.anchoredPosition);

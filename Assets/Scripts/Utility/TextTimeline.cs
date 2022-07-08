@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Febucci.UI;
 using TMPro;
 using UnityEngine;
@@ -52,6 +53,11 @@ public class TextTimeline : MonoBehaviour
 
     void GoToNext(string message = "event")
     {
+        foreach (ButtonHover i in FindObjectsOfType<ButtonHover>())
+        {
+            i.StopHovering();
+        }
+        
         if (current < texts.Length)
         {
             texts[current].SetActive(true);
@@ -63,7 +69,7 @@ public class TextTimeline : MonoBehaviour
                 GoToNext();
             }
             
-            if (texts[current-1].GetComponentInChildren<Button>())
+            if (!isMainScene && texts[current-1].GetComponentInChildren<Button>())
             {
                 GoToNext();
             }

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
 using Febucci.UI;
-using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ButtonHover : MonoBehaviour
@@ -16,9 +13,7 @@ public class ButtonHover : MonoBehaviour
 
     void Start()
     {
-        butt = GetComponent<Button>();
-        dsb = FindObjectOfType<DeselectButton>();
-        inv = FindObjectOfType<Inventory>();
+        Check();
     }
 
     void Update()
@@ -30,7 +25,14 @@ public class ButtonHover : MonoBehaviour
         }
     }
 
-    void OnMouseEnter()
+    void Check()
+    {
+        butt = GetComponent<Button>();
+        dsb = FindObjectOfType<DeselectButton>();
+        inv = FindObjectOfType<Inventory>();
+    }
+
+    public void StartHovering()
     {
         hovering = true;
         butt.Select();
@@ -47,9 +49,11 @@ public class ButtonHover : MonoBehaviour
             temp.GetComponent<TextAnimator>().effectIntensityMultiplier = 50;
         }
     }
-    
-    void OnMouseExit()
+
+    public void StopHovering()
     {
+        Check();
+        
         hovering = false;
         dsb.Deselect();
         
@@ -64,5 +68,23 @@ public class ButtonHover : MonoBehaviour
         {
             temp.GetComponent<TextAnimator>().effectIntensityMultiplier = 0;
         }
+    }
+
+    void OnMouseOver()
+    {
+        if (!hovering)
+        {
+            StartHovering();   
+        }
+    }
+
+    void OnMouseEnter()
+    {
+        Check();
+    }
+
+    void OnMouseExit()
+    {
+        StopHovering();
     }
 }

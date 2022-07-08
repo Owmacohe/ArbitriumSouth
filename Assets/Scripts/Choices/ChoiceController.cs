@@ -31,12 +31,12 @@ public class ChoiceController : MonoBehaviour
         {
             SetUI(currentPath + "_" + direction);
         }
+
+        StopHovering();
     }
 
     void SetUI(string target)
     {
-        print(target);
-        
         if (inv.items == null)
         {
             inv.SetItemsArray();
@@ -60,11 +60,11 @@ public class ChoiceController : MonoBehaviour
             }
             
             description.text = temp.Description;
-            north.text = CheckAndFormat(temp.North);
-            south.text = "<wiggle a=0.08>" + CheckAndFormat(temp.South) + "</wiggle>";
-            west.text = CheckAndFormat(temp.West);
-            east.text = CheckAndFormat(temp.East);
-            nodeName.text = CheckAndFormat(temp.NodeName.ToUpper());
+            north.text = temp.North;
+            south.text = "<wiggle a=0.08>" + temp.South + "</wiggle>";
+            west.text = temp.West;
+            east.text = temp.East;
+            nodeName.text = temp.NodeName.ToUpper();
             
             currentPath = target;
         }
@@ -74,19 +74,17 @@ public class ChoiceController : MonoBehaviour
         FindObjectOfType<TextTimeline>().Reset();
     }
 
-    string CheckAndFormat(string str)
-    {
-        /*
-        if (str.Contains("she") || str.Contains("her"))
-        {
-            
-        }
-        */
-    }
-
     void AddToInventory()
     {
         inv.AddToInventory(itemIndexQueue[0]);
         itemIndexQueue.RemoveAt(0);
+    }
+
+    void StopHovering()
+    {
+        foreach (ButtonHover i in FindObjectsOfType<ButtonHover>())
+        {
+            i.StopHovering();
+        }
     }
 }
