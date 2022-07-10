@@ -43,7 +43,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Choices\Inventory.cs" />
      <Compile Include="Assets\Scripts\Utility\TextTimeline.cs" />
-     <Compile Include="Assets\Scripts\Files\JSONToNodesArray.cs" />
      <Compile Include="Assets\Scripts\Utility\ColliderOffset.cs" />
      <Compile Include="Assets\Scripts\Visuals\GenerateBackgroundText.cs" />
      <Compile Include="Assets\Scripts\Sound\MusicController.cs" />

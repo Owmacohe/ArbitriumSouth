@@ -201,9 +201,6 @@ public class GenerateBackgroundText : MonoBehaviour
         else if (layout.Equals(Layouts.FullMain))
         {
             RemoveChunkFromCentre(new Vector2(25, 15));
-
-            Vector2 optionSize = new Vector2(14, 6);
-            RemoveChunk(new Vector2(columnNum, 0), new Vector2(optionSize.x * 3, optionSize.y));
         }
         else if (layout.Equals(Layouts.Epilogue))
         {

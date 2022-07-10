@@ -41,35 +41,59 @@ public class TextTimeline : MonoBehaviour
             
             if (!i.GetComponentInChildren<Button>())
             {
-                i.GetComponent<TMP_Text>().text += "<?event>";
+                TMP_Text temp = i.GetComponent<TMP_Text>();
+                
+                if (!isMainScene)
+                {
+                    temp.text = ChoiceController.SearchAndFormat(temp.text, false);
+                }
+                
+                temp.text += "<?event>";
                 i.GetComponent<TextAnimator>().onEvent += GoToNext;
             }
         }
 
-        GoToNext();
+        if (isMainScene)
+        {
+            ShowText(0);
+        }
+        else
+        {
+            GoToNext();   
+        }
     }
 
     void GoToNext(string message = "event")
     {
         Invoke(nameof(StopAllHovering), 0.01f);
         
+        if (isMainScene)
+        {
+            ShowAll();
+            return;
+        }
+        
         if (current < texts.Length)
         {
-            texts[current].SetActive(true); // TODO: this flickers before the TextAnimator picks it up and starts typing
+            ShowText(current);
 
             current++;
 
-            if (isMainScene && current > 1)
-            {
-                ShowAll();
-                return;
-            }
-            
-            if (!isMainScene && texts[current-1].GetComponentInChildren<Button>())
+            if (texts[current-1].GetComponentInChildren<Button>())
             {
                 GoToNext();
             }
         }
+    }
+
+    void ShowText(int index)
+    {
+        TMP_Text temp = texts[index].GetComponent<TMP_Text>();
+        string str = temp.text;
+        
+        temp.text = "";
+        texts[index].SetActive(true);
+        temp.text = str;
     }
 
     void ShowAll()
@@ -81,14 +105,14 @@ public class TextTimeline : MonoBehaviour
 
         Invoke(nameof(StopAllHovering), 0.01f);
         
-        foreach (GameObject i in texts)
+        for (int i = 0; i < texts.Length; i++)
         {
-            if (!i.GetComponentInChildren<Button>())
+            if (!texts[i].GetComponentInChildren<Button>())
             {
-                i.GetComponent<TextAnimator>().onEvent -= GoToNext;
+                texts[i].GetComponent<TextAnimator>().onEvent -= GoToNext;
             }
             
-            i.SetActive(true);
+            ShowText(i);
         }
     }
 

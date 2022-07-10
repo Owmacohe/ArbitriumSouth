@@ -170,6 +170,33 @@
             "West": "Parse its amusement, in search of consequential meaning?",
             "East": "Approach the fractured outer-light, in curiosity and reprehension?",
             "South": "Exit through the ruptured world-cloth that lies tattered about it?"
+        },
+        {
+            "NodeNum": "1_3_1",
+            "NodeName": "An Archive, Perturbed",
+            "Description": "The bones and coffins of these now disparate half-thoughts lie cracked and strewn in the earth. Their resting places, ordained by her hand for service and procedure, release their bundled souls. Their reminder of futility spurns you down, deeper, to the processing core below. It's now inactive core float lymbotic in thought.",
+            "North": "Seek the endless memory fields, those rows of bureaucratic hearts?",
+            "West": "Resolve to find the core, a lost signal to which all must return?",
+            "East": "Find the hidden wetware, lubricant for the generated selves?",
+            "South": "Find final comfort in the her coffins, restless as they may be?"
+        },
+        {
+            "NodeNum": "1_3_2",
+            "NodeName": "Burrowed Keeper",
+            "Description": "The bird skull nestles in close and comfortable to that beating organ. In time, its thrumming tune matches that of your own. It whispers secrets, knowledge gleamed from countless iterations in the dying world.\n\n<style=Alt><wiggle a=0.08>Humming Skull is added to your inventory.</wiggle></style>",
+            "North": "The skull speaks of something new; a place beyond the wall?",
+            "West": "The skull speaks of a tangible rejuvenation within your grasp?",
+            "East": "The skull speaks of she, resplendent in her craft?",
+            "South": "The skull speaks of familiar emptiness so deep within?"
+        },
+        {
+            "NodeNum": "1_3_3",
+            "NodeName": "A Forgotten Placeholder",
+            "Description": "Bog offal and desperate roots alike part ways in your subterranean descent. The beat, now manifesting itself as splintered pixel sorting unrolls the gap between spaces, and brings your yet tired mind to singular directory. In that lonesome undersoil cavern, a dark prototype lies in wait. A conception of the divine, now wrought with sorrow.",
+            "North": "In realization, turn her cruelty from you, a stain upon the work?",
+            "West": "Hold tender hands with this, her reflection?",
+            "East": "Demand of the hidden figure its station, and its cause?",
+            "South": "Take advantage of the silence, and sit for all remaining time?"
         }
     ]
 }

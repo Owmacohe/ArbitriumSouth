@@ -209,7 +209,6 @@ GameObject:
   m_Component:
   - component: {fileID: 47607164}
   - component: {fileID: 47607165}
-  - component: {fileID: 47607163}
   m_Layer: 0
   m_Name: Choice Controller
   m_TagString: Untagged
@@ -217,19 +216,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &47607163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47607162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb2c1f765b0455aa87d2523023ec490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  file: {fileID: 4900000, guid: a59588c7cfb95af46a3d27f11e9321e0, type: 3}
 --- !u!4 &47607164
 Transform:
   m_ObjectHideFlags: 0
@@ -257,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01401b4992e4c63bce3af21b97e6630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  file: {fileID: 4900000, guid: a59588c7cfb95af46a3d27f11e9321e0, type: 3}
   description: {fileID: 1243350873}
   north: {fileID: 387977800}
   west: {fileID: 1336177736}
@@ -751,6 +738,7 @@ MonoBehaviour:
   inventorySprites:
   - {fileID: 0}
   - {fileID: 21300000, guid: 4520ed4b506f8ed419fb3f85e192e4a1, type: 3}
+  - {fileID: 21300000, guid: efe784300384c1c4286498a71db0c214, type: 3}
   up: 0
 --- !u!1 &726627446
 GameObject:
@@ -1362,6 +1350,7 @@ MonoBehaviour:
   - {fileID: 1336177734}
   - {fileID: 1686316192}
   - {fileID: 1159944696}
+  - {fileID: 1520166409}
 --- !u!1 &1159944696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,12 +2583,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7876245961586957971, guid: 8a055d1a553103f4da2ea52366246fe8, type: 3}
   m_PrefabInstance: {fileID: 1520166406}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1520166409}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1520166409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7876245961586957969, guid: 8a055d1a553103f4da2ea52366246fe8, type: 3}
+  m_PrefabInstance: {fileID: 1520166406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1535420082
 GameObject:
   m_ObjectHideFlags: 0

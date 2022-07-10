@@ -12,9 +12,9 @@
     - [x] 1_2_2: Rehearsed Aggressions
     - [x] 1_2_3: A Thinking Tear
   - [x] 1_3: Loam Coffin
-    - [ ] 1_3_1: 
-    - [ ] 1_3_2: 
-    - [ ] 1_3_3: 
+    - [x] 1_3_1: An Archive, Perturbed
+    - [x] 1_3_2: Burrowed Keeper
+    - [x] 1_3_3: A Forgotten Placeholder
 - [x] 2: A Rising Beast
   - [x] 2_1: Sunset World
     - [ ] 2_1_1: 
