@@ -209,6 +209,8 @@ GameObject:
   m_Component:
   - component: {fileID: 47607164}
   - component: {fileID: 47607165}
+  - component: {fileID: 47607166}
+  - component: {fileID: 47607167}
   m_Layer: 0
   m_Name: Choice Controller
   m_TagString: Untagged
@@ -250,6 +252,30 @@ MonoBehaviour:
   east: {fileID: 1686316194}
   south: {fileID: 1159944698}
   nodeName: {fileID: 1520166408}
+--- !u!114 &47607166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47607162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2352db6b25846d7b0f7769604f2bfdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &47607167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47607162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fea007eaaee40dab5350e4d99fc4aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &118508842
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,8 +5,17 @@ using Random = UnityEngine.Random;
 
 public class Overlay : MonoBehaviour
 {
+    [SerializeField]
+    AudioSource staticSound;
+    [SerializeField]
+    float staticSpeed = 1.5f;
+    [SerializeField]
+    Vector2 volumeBounds = new Vector2(0.2f, 0.8f);
+    [SerializeField]
+    Vector2 pitchBounds = new Vector2(1, 1.5f);
+    
     TMP_Text text;
-    bool isShowing, isMoving;
+    bool isShowing, isMoving, isStaticUp;
     Vector3 dir;
     CRTPostProcess post;
     
@@ -20,7 +29,7 @@ public class Overlay : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isShowing && Random.Range(0, 1200) == 0)
+        if (!isShowing && Random.Range(0, 100) == 0)
         {
             transform.localPosition = GetRandomVector3() * 100f;
             
@@ -35,6 +44,10 @@ public class Overlay : MonoBehaviour
             }
 
             isShowing = true;
+            
+            isStaticUp = true;
+            VolumeUp();
+            PitchUp();
             
             Invoke(nameof(HideOverlay), overlayTime);
         }
@@ -72,5 +85,77 @@ public class Overlay : MonoBehaviour
         
         isShowing = false;
         isMoving = false;
+        
+        isStaticUp = false;
+        VolumeDown();
+        PitchDown();
+    }
+
+    void VolumeUp()
+    {
+        if (isStaticUp && staticSound.volume < volumeBounds.y)
+        {
+            staticSound.volume += 0.1f * staticSpeed;
+
+            if (staticSound.volume > volumeBounds.y)
+            {
+                staticSound.volume = volumeBounds.y;
+            }
+            else
+            {
+                Invoke(nameof(VolumeUp), 0.1f);
+            }
+        }
+    }
+    
+    void PitchUp()
+    {
+        if (isStaticUp && staticSound.pitch < pitchBounds.y)
+        {
+            staticSound.pitch += 0.1f * staticSpeed;
+
+            if (staticSound.pitch > pitchBounds.y)
+            {
+                staticSound.pitch = pitchBounds.y;
+            }
+            else
+            {
+                Invoke(nameof(PitchUp), 0.1f);
+            }
+        }
+    }
+    
+    void VolumeDown()
+    {
+        if (!isStaticUp && staticSound.volume > volumeBounds.x)
+        {
+            staticSound.volume -= 0.1f * staticSpeed;
+            
+            if (staticSound.volume < volumeBounds.x)
+            {
+                staticSound.volume = volumeBounds.x;
+            }
+            else
+            {
+                Invoke(nameof(VolumeDown), 0.1f);
+            }
+        }
+    }
+    
+    void PitchDown()
+    {
+        if (!isStaticUp && staticSound.pitch > pitchBounds.x)
+        {
+            staticSound.pitch -= 0.1f * staticSpeed;
+            
+            if (staticSound.pitch < pitchBounds.x)
+            {
+                staticSound.pitch = pitchBounds.x;
+            }
+            else
+            {
+                Invoke(nameof(PitchDown), 0.1f);
+            }
+        }
     }
 }

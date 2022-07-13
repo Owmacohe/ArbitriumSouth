@@ -5,6 +5,17 @@ public class NodesArray
 {
     public Node[] Nodes;
 
+    public void CheckForEndings()
+    {
+        foreach (Node i in Nodes)
+        {
+            if (i.North.Equals("") && i.West.Equals("") && i.East.Equals("") && i.South.Equals(""))
+            {
+                i.IsEnding = true;
+            }
+        }
+    }
+
     public Node GetNode(string target)
     {
         foreach (Node i in Nodes)

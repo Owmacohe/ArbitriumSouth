@@ -9,4 +9,6 @@ public class Node
     public string West;
     public string East;
     public string South;
+
+    public bool IsEnding;
 }

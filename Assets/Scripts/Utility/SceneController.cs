@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
     GenerateBackgroundText background;
-    string nextScene;
+    string nextScene, endingDescription;
 
     void Start()
     {
@@ -19,10 +20,20 @@ public class SceneController : MonoBehaviour
         Application.Quit(0);
     }
 
-    public void LoadScene(string name)
+    public void LoadScene(string name, string description)
     {
+        if (!description.Equals(""))
+        {
+            endingDescription = description;
+        }
+        
         nextScene = name;
         Invoke(nameof(WaitLoadScene), 0.1f);
+    }
+
+    public void LoadScene(string name)
+    {
+        LoadScene(name, "");
     }
 
     void WaitLoadScene()
@@ -34,6 +45,11 @@ public class SceneController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name.Equals("Ending"))
+        {
+            FindObjectOfType<TMP_Text>().text = endingDescription;
+        }
+        
         if (background != null)
         {
             if (scene.name.Equals("Entry") || scene.name.Equals("Ending"))

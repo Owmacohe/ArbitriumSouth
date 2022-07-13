@@ -35,6 +35,8 @@ public class ChoiceController : MonoBehaviour
     void Start()
     {
         nodes = JsonToNodesArray();
+        nodes.CheckForEndings();
+        
         inv = FindObjectOfType<Inventory>();
         itemIndexQueue = new List<int>();
         
@@ -68,36 +70,43 @@ public class ChoiceController : MonoBehaviour
 
         if (temp != null)
         {
-            if (inv.items == null)
+            if (!temp.IsEnding)
             {
-                inv.SetItemsArray();
-            }
-
-            for (int i = 0; i < inv.items.Length; i++)
-            {
-                if (temp.NodeNum.Equals(inv.items[i].Origin))
+                if (inv.items == null)
                 {
-                    itemIndexQueue.Add(i);
-                    StartCoroutine(AddToInventory(false));
+                    inv.SetItemsArray();
                 }
-                else if (temp.NodeNum.Equals(inv.items[i].Target))
-                {
-                    // TODO
-                }
-            }
-            
-            description.text = SearchAndFormat(temp.Description, false);
-            north.text = SearchAndFormat(temp.North, false);
-            south.text = SearchAndFormat("<wiggle a=0.08>" + temp.South + "</wiggle>", true);
-            west.text = SearchAndFormat(temp.West, false);
-            east.text = SearchAndFormat(temp.East, false);
-            nodeName.text = SearchAndFormat(temp.NodeName.ToUpper(), false);
-            
-            currentPath = target;
 
-            inv.UpdateInventory(currentPath);
+                for (int i = 0; i < inv.items.Length; i++)
+                {
+                    if (temp.NodeNum.Equals(inv.items[i].Origin))
+                    {
+                        itemIndexQueue.Add(i);
+                        StartCoroutine(AddToInventory(false));
+                    }
+                    else if (temp.NodeNum.Equals(inv.items[i].Target))
+                    {
+                        // TODO
+                    }
+                }
+            
+                description.text = SearchAndFormat(temp.Description, false);
+                north.text = SearchAndFormat(temp.North, false);
+                south.text = SearchAndFormat("<wiggle a=0.08>" + temp.South + "</wiggle>", true);
+                west.text = SearchAndFormat(temp.West, false);
+                east.text = SearchAndFormat(temp.East, false);
+                nodeName.text = SearchAndFormat(temp.NodeName.ToUpper(), false);
+            
+                currentPath = target;
+
+                inv.UpdateInventory(currentPath);
         
-            FindObjectOfType<TextTimeline>().Reset();
+                FindObjectOfType<TextTimeline>().Reset();
+            }
+            else
+            {
+                GetComponent<SceneController>().LoadScene("Ending", temp.Description);
+            }   
         }
     }
 

@@ -241,6 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0bfe7e0e474008ae6b3534f008798e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  staticSound: {fileID: 0}
+  staticSpeed: 1.5
+  volumeBounds: {x: 0.2, y: 0.8}
+  pitchBounds: {x: 1, y: 2}
 --- !u!1 &7293922838969385895
 GameObject:
   m_ObjectHideFlags: 0

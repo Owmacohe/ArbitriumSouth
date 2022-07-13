@@ -472,6 +472,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7293922838539974332, guid: 0e77afdf4b36d8a4195b1e6dd498ab8e, type: 3}
+      propertyPath: staticSound
+      value: 
+      objectReference: {fileID: 915362237}
     - target: {fileID: 7293922838969385890, guid: 0e77afdf4b36d8a4195b1e6dd498ab8e, type: 3}
       propertyPath: m_Camera
       value: 
