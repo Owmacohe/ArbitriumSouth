@@ -10,7 +10,7 @@ public class TextTimeline : MonoBehaviour
     [SerializeField] bool isMainScene;
     [SerializeField] GameObject[] texts;
 
-    int current;
+    [HideInInspector] public int current;
     GenerateBackgroundText background;
 
     void Start()
@@ -63,7 +63,12 @@ public class TextTimeline : MonoBehaviour
         }
     }
 
-    void GoToNext(string message = "event")
+    public void FinishCurrent()
+    {
+        texts[current].GetComponent<TextAnimator>().ShowAllCharacters(false);
+    }
+
+    public void GoToNext(string message = "event")
     {
         Invoke(nameof(StopAllHovering), 0.01f);
         

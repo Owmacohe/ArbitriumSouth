@@ -29,7 +29,7 @@ public class Overlay : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isShowing && Random.Range(0, 100) == 0)
+        if (!isShowing && Random.Range(0, 300) == 0)
         {
             transform.localPosition = GetRandomVector3() * 100f;
             

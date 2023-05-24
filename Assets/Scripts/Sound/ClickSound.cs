@@ -17,7 +17,7 @@ public class ClickSound : MonoBehaviour
 
     public void Click()
     {
-        source.pitch = Random.Range(-3f, 3f);
+        source.pitch = Random.Range(0.3f, 1.5f);
         source.Play();
     }
 }

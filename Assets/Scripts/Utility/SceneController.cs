@@ -28,7 +28,7 @@ public class SceneController : MonoBehaviour
         }
         
         nextScene = name;
-        Invoke(nameof(WaitLoadScene), 0.1f);
+        Invoke(nameof(WaitLoadScene), 0.5f);
     }
 
     public void LoadScene(string name)
@@ -74,9 +74,9 @@ public class SceneController : MonoBehaviour
             }   
         }
 
-        foreach (GameObject i in GameObject.FindGameObjectsWithTag("UI"))
+        foreach (var i in GameObject.FindObjectsOfType<Canvas>())
         {
-            i.GetComponent<Canvas>().worldCamera = Camera.main;
+            i.worldCamera = Camera.main;
         }
     }
 }

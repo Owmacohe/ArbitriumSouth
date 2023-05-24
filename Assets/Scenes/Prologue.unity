@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b9888ae39c4d3d86f3f07366f1ab2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainScene: 0
   texts:
   - {fileID: 1463165630}
   - {fileID: 504990689}
@@ -458,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7876245961586957970, guid: 8a055d1a553103f4da2ea52366246fe8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -370
+      value: -340
       objectReference: {fileID: 0}
     - target: {fileID: 7876245961586957970, guid: 8a055d1a553103f4da2ea52366246fe8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -679,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -858,7 +860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9115742862947108325, guid: b7ffd60e1451c1c4fb6cc179585fa1fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -360
+      value: -340
       objectReference: {fileID: 0}
     - target: {fileID: 9115742862947108325, guid: b7ffd60e1451c1c4fb6cc179585fa1fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1196,7 +1198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7876245961586957970, guid: 8a055d1a553103f4da2ea52366246fe8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -370
+      value: -340
       objectReference: {fileID: 0}
     - target: {fileID: 7876245961586957970, guid: 8a055d1a553103f4da2ea52366246fe8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

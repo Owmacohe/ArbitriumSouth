@@ -88,7 +88,7 @@ public class Inventory : MonoBehaviour
                         text = "South";
                         break;
                     case -1:
-                        text = "None";
+                        text = "";
                         break;
                 }
         

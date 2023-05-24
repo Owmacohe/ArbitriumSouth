@@ -26,6 +26,7 @@ public class ChoiceController : MonoBehaviour
     
     [SerializeField] TextAsset file;
     [SerializeField] TMP_Text description, north, west, east, south, nodeName;
+    [SerializeField] TextTimeline timeline;
 
     string currentPath;
     NodesArray nodes;
@@ -42,7 +43,18 @@ public class ChoiceController : MonoBehaviour
         
         SetUI("0");
     }
-    
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1") && timeline.current == 0)
+        {
+            timeline.GoToNext();
+            timeline.FinishCurrent();
+            
+            StartCoroutine(AddToInventory(true));
+        }
+    }
+
     public NodesArray JsonToNodesArray() { return JsonUtility.FromJson<NodesArray>(file.text); }
 
     public void MakeChoice(string direction)
@@ -112,13 +124,13 @@ public class ChoiceController : MonoBehaviour
 
     IEnumerator AddToInventory(bool immediate)
     {
-        if (!immediate)
-        {
-            yield return new WaitForSeconds(16);
-        }
+        if (!immediate) yield return new WaitForSeconds(16);
 
-        inv.AddToInventory(itemIndexQueue[0]);
-        itemIndexQueue.RemoveAt(0);
+        if (itemIndexQueue.Count > 0)
+        {
+            inv.AddToInventory(itemIndexQueue[0]);
+            itemIndexQueue.RemoveAt(0);   
+        }
     }
 
     void StopHovering()
